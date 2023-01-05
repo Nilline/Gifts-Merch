@@ -6,10 +6,211 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230106000240">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230106001446">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Стилі для прелоадера -->
+	<style class="preloader-style">
+		.preloader {
+			pointer-events: none;
+			z-index: 1000;
+			position: fixed;
+			width: 100vw;
+			height: 100vh;
+			top: 0;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			background: #F6F3F7;
+		}
+
+		.preloader * {
+			box-sizing: border-box;
+		}
+
+		.preloader__body {
+			padding: 0.93rem;
+			display: flex;
+			flex-direction: column;
+
+			position: relative;
+			width: 280px;
+			height: 280px;
+		}
+
+		.preloader__one,
+		.preloader__two {
+			position: absolute;
+			width: 175px;
+			height: 175px;
+			border-radius: 50%;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+		}
+
+		.preloader__one {
+			animation: spin1 2.3s infinite linear;
+		}
+
+		.preloader__two {
+			transform: rotate(45deg);
+			animation: spin2 2.3s infinite linear;
+		}
+
+		.preloader__one_one,
+		.preloader__two_five {
+			border-top: 3px solid transparent;
+		}
+
+		.preloader__one_two,
+		.preloader__two_six {
+			border-right: 3px solid transparent;
+		}
+
+		.preloader__one_three,
+		.preloader__two_seven {
+			border-bottom: 3px solid transparent;
+		}
+
+		.preloader__one_four,
+		.preloader__two_eight {
+			border-left: 3px solid transparent;
+		}
+
+		.preloader__one_one {
+			top: -100px;
+		}
+
+		.preloader__one_two {
+			right: -100px;
+		}
+
+		.preloader__one_three {
+			bottom: -100px;
+		}
+
+		.preloader__one_four {
+			left: -100px;
+		}
+
+		.preloader__two_five {
+			right: -70.5px;
+			bottom: 70.5px;
+		}
+
+		.preloader__two_six {
+			left: 70.5px;
+			top: 70.5px;
+		}
+
+		.preloader__two_seven {
+			left: -70.5px;
+			top: 70.5px;
+		}
+
+		.preloader__two_eight {
+			right: 70.5px;
+			top: -70.5px;
+		}
+
+		@keyframes spin1 {
+			from {
+				transform: rotate(0deg);
+			}
+
+			to {
+				transform: rotate(360deg);
+			}
+
+			0% {
+				border-color: #d7caf2;
+			}
+
+			50% {
+				border-color: #9864ff;
+			}
+
+			100% {
+				border-color: #d7caf2;
+			}
+		}
+
+		@keyframes spin2 {
+			from {
+				transform: rotate(45deg);
+			}
+
+			to {
+				transform: rotate(405deg);
+			}
+
+			0% {
+				border-color: #d7caf2;
+			}
+
+			50% {
+				border-color: #9864ff;
+			}
+
+			100% {
+				border-color: #d7caf2;
+			}
+		}
+
+		.preloader__counter {
+			font-size: 20px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: rgba(152, 100, 255, 0.8);
+			font-family: sans-serif;
+		}
+
+		.preloader__line span {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 3px;
+			background-color: rgba(152, 100, 255, 0.8);
+			border-radius: 16px;
+			transition: width 0.3s ease 0s;
+		}
+
+		.lock body {
+			overflow: hidden;
+			touch-action: none;
+			overscroll-behavior: none;
+		}
+
+		.loading body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		.loading .preloader {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.loaded .preloader {
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.5s ease 0s;
+		}
+
+		.loaded body {
+			transition: opacity 0.5s ease 0s;
+			opacity: 1;
+			visibility: visible;
+		}
+	</style>
 </head>
 
 <body>
@@ -606,219 +807,12 @@
 		</div>
 	</div>
 	<div id="preloader">
-		<!-- Стилі для прелоадера -->
-		<style class="preloader-style">
-			.preloader {
-				pointer-events: none;
-				z-index: 1000;
-				position: fixed;
-				width: 100vw;
-				height: 100vh;
-				top: 0;
-				left: 0;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-
-				background: #F6F3F7;
-			}
-
-			.preloader * {
-				box-sizing: border-box;
-			}
-
-			.preloader__body {
-				padding: 0.93rem;
-				display: flex;
-				flex-direction: column;
-
-				position: relative;
-				width: 280px;
-				height: 280px;
-			}
-
-			.preloader__one,
-			.preloader__two {
-				position: absolute;
-				width: 175px;
-				height: 175px;
-				border-radius: 50%;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
-				margin: auto;
-			}
-
-			.preloader__one {
-				animation: spin1 2.3s infinite linear;
-			}
-
-			.preloader__two {
-				transform: rotate(45deg);
-				animation: spin2 2.3s infinite linear;
-			}
-
-			.preloader__one_one,
-			.preloader__two_five {
-				border-top: 3px solid transparent;
-			}
-
-			.preloader__one_two,
-			.preloader__two_six {
-				border-right: 3px solid transparent;
-			}
-
-			.preloader__one_three,
-			.preloader__two_seven {
-				border-bottom: 3px solid transparent;
-			}
-
-			.preloader__one_four,
-			.preloader__two_eight {
-				border-left: 3px solid transparent;
-			}
-
-			.preloader__one_one {
-				top: -100px;
-			}
-
-			.preloader__one_two {
-				right: -100px;
-			}
-
-			.preloader__one_three {
-				bottom: -100px;
-			}
-
-			.preloader__one_four {
-				left: -100px;
-			}
-
-			.preloader__two_five {
-				right: -70.5px;
-				bottom: 70.5px;
-			}
-
-			.preloader__two_six {
-				left: 70.5px;
-				top: 70.5px;
-			}
-
-			.preloader__two_seven {
-				left: -70.5px;
-				top: 70.5px;
-			}
-
-			.preloader__two_eight {
-				right: 70.5px;
-				top: -70.5px;
-			}
-
-			@keyframes spin1 {
-				from {
-					transform: rotate(0deg);
-				}
-
-				to {
-					transform: rotate(360deg);
-				}
-
-				0% {
-					border-color: #d7caf2;
-				}
-
-				50% {
-					border-color: #9864ff;
-				}
-
-				100% {
-					border-color: #d7caf2;
-				}
-			}
-
-			@keyframes spin2 {
-				from {
-					transform: rotate(45deg);
-				}
-
-				to {
-					transform: rotate(405deg);
-				}
-
-				0% {
-					border-color: #d7caf2;
-				}
-
-				50% {
-					border-color: #9864ff;
-				}
-
-				100% {
-					border-color: #d7caf2;
-				}
-			}
-
-			.preloader__counter {
-				font-size: 20px;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				color: rgba(152, 100, 255, 0.8);
-				font-family: sans-serif;
-			}
-
-			.preloader__line span {
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				height: 3px;
-				background-color: rgba(152, 100, 255, 0.8);
-				border-radius: 16px;
-				transition: width 0.3s ease 0s;
-			}
-
-			.lock body {
-				overflow: hidden;
-				touch-action: none;
-				overscroll-behavior: none;
-			}
-
-			.loading body {
-				opacity: 0;
-				visibility: hidden;
-			}
-
-			.loading .preloader {
-				opacity: 1;
-				visibility: visible;
-			}
-
-			.loaded .preloader {
-				opacity: 0;
-				visibility: hidden;
-				transition: all 0.5s ease 0s;
-			}
-
-			.loaded body {
-				transition: opacity 0.5s ease 0s;
-				opacity: 1;
-				visibility: visible;
-			}
-		</style>
 		<!-- Скріпт прелоадера -->
 		<script>
 			(function() {
-				const preloaderStyle = document.querySelector('.preloader-style');
-				const rem = preloaderStyle.cloneNode(true);
-				preloaderStyle.remove();
-				const head = document.head;
-				head.append(rem);
-				console.log(head);
-
 				const preloaderImages = document.querySelectorAll('img');
 				const preloaderContainer = document.querySelector('#preloader');
+				const preloaderStyle = document.querySelector('.preloader-style');
 				const settings = {
 					// Затримка перед видаленням прелоадера з html після закінчення завантаження
 					delayRemovePreloader: 500,
@@ -905,8 +899,10 @@
 									htmlDocument.classList.add('loaded');
 								}, settings.delayRemovePreloader >= 500 ? settings.delayRemovePreloader - 500 : 0);
 								const intervalRemovePreloader = setInterval(() => {
-									preloaderStyle.remove();
 									preloader.remove();
+									if (preloaderStyle) {
+										preloaderStyle.remove();
+									}
 									clearInterval(intervalRemovePreloader);
 									clearInterval(timer);
 									preloaderContainer.remove();
@@ -917,13 +913,15 @@
 						}, 300);
 					}
 				} else {
-					preloaderStyle.remove();
+					if (preloaderStyle) {
+						preloaderStyle.remove();
+					}
 					preloaderContainer.remove();
 				}
 			})();
 		</script>
 	</div>
-	<script src="js/app.min.js?_v=20230106000240"></script>
+	<script src="js/app.min.js?_v=20230106001446"></script>
 </body>
 
 </html>
