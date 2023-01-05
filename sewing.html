@@ -6,14 +6,14 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230101234540">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230106000240">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-	<div class="wrapper wrapper_sewing">
+	<div class="wrapper wrapper_other wrapper_margin">
 
 		<header data-lp class="header">
 			<div class="header__container">
@@ -136,6 +136,16 @@
 				<div class="mainscreen__container">
 					<div class="mainscreen__body">
 						<div class="mainscreen__content">
+							<div class="mainscreen__breadcrumb breadcrumb">
+								<ul class="breadcrumb__list">
+									<li class="breadcrumb__item">
+										<a href="home.html">Главная</a>
+									</li>
+									<li class="breadcrumb__item breadcrumb__item_active">
+										<a href="home.html">Пошив</a>
+									</li>
+								</ul>
+							</div>
 							<h1 class="mainscreen__title main-title">
 								Современный мерч создает современные бренды
 							</h1>
@@ -372,21 +382,232 @@
 			</div>
 		</footer>
 	</div>
-	<!-- 
-<div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
+	<div id="goods" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#close"></use>
+					</svg>
+				</button>
+				<div class="popup__goods goods-popup">
+					<div class="goods-popup__sliders">
+						<div class="goods-popup__slider goods-popup__slider-main swiper">
+							<div class="goods-popup__wrapper swiper-wrapper">
+								<div class="goods-popup__slide-ibg swiper-slide">
+									<div class="swiper-zoom-container">
+										<picture><source srcset="img/sewing/order/1.webp" type="image/webp"><img src="img/sewing/order/1.jpg" alt=""></picture>
+									</div>
+								</div>
+								<div class="goods-popup__slide-ibg swiper-slide">
+									<div class="swiper-zoom-container">
+										<picture><source srcset="img/sewing/order/2.webp" type="image/webp"><img src="img/sewing/order/2.jpg" alt=""></picture>
+									</div>
+								</div>
+								<div class="goods-popup__slide-ibg swiper-slide">
+									<div class="swiper-zoom-container">
+										<picture><source srcset="img/sewing/order/3.webp" type="image/webp"><img src="img/sewing/order/3.jpg" alt=""></picture>
+									</div>
+								</div>
+							</div>
+							<span class="goods-popup__arrow goods-popup__arrow_left">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#arrow-left"></use>
+								</svg>
+							</span>
+							<span class="goods-popup__arrow goods-popup__arrow_right">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#arrow-right"></use>
+								</svg>
+							</span>
+						</div>
+						<div class="goods-popup__slider goods-popup__slider-thumbs swiper">
+							<div class="goods-popup__wrapper swiper-wrapper">
+								<div class="goods-popup__slide-ibg swiper-slide">
+									<picture><source srcset="img/sewing/order/1.webp" type="image/webp"><img src="img/sewing/order/1.jpg" alt=""></picture>
+								</div>
+								<div class="goods-popup__slide-ibg swiper-slide">
+									<picture><source srcset="img/sewing/order/2.webp" type="image/webp"><img src="img/sewing/order/2.jpg" alt=""></picture>
+								</div>
+								<div class="goods-popup__slide-ibg swiper-slide">
+									<picture><source srcset="img/sewing/order/3.webp" type="image/webp"><img src="img/sewing/order/3.jpg" alt=""></picture>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="goods-popup__content">
+						<div class="goods-popup__breadcrumb breadcrumb">
+							<ul class="breadcrumb__list">
+								<li class="breadcrumb__item">
+									<a href="home.html">Главная</a>
+								</li>
+								<li class="breadcrumb__item">
+									<a href="home.html">Все товары</a>
+								</li>
+								<li class="breadcrumb__item">
+									<a href="home.html">Сумки и аксессуары</a>
+								</li>
+								<li class="breadcrumb__item">
+									<a href="home.html">Рюкзаки</a>
+								</li>
+								<li class="breadcrumb__item breadcrumb__item_active">
+									<a href="#">EL003 Elleven Checkpoint-Friendly Compu-Backpack</a>
+								</li>
+							</ul>
+						</div>
+						<h3 class="goods-popup__name">
+							EL003 Elleven Checkpoint-Friendly Compu-Backpack
+						</h3>
+						<form action="#" class="goods-popup__colors colors">
+							<div data-color="#524983" class="colors__color">
+								<input type="radio" name="form[]" value="" class="colors__radio">
+								<label class="colors__label-color"></label>
+							</div>
+							<div data-color="#309F85" class="colors__color">
+								<input type="radio" name="form[]" value="" class="colors__radio">
+								<label class="colors__label-color"></label>
+							</div>
+							<div data-color="#F1F1F1" class="colors__color">
+								<input type="radio" name="form[]" value="" class="colors__radio">
+								<label class="colors__label-color"></label>
+							</div>
+						</form>
+						<div class="goods-popup__price-block">
+							From Price <span>$76.43</span>
+						</div>
+						<p class="goods-popup__text">
+							This exclusive design has a designated laptop-only section that unfolds to lay flat on the X-ray belt to increase your speed, convenience and security. (Pens,
+							Laptop and other devices shown are not included)
+						</p>
+						<div class="goods-popup__media-992"></div>
+						<div class="goods-popup__info-block block-info-popup">
+							<form data-da=".goods-popup__media-992,991.98,first" action="#" class="block-info-popup__form pick-up-size">
+								<div class="pick-up-size__title">Размер</div>
+								<div class="pick-up-size__row">
+									<div class="pick-up-size__body-form">
+										<input checked id="xs" type="radio" name="form[]" value="XS" class="pick-up-size__radio">
+										<label for="xs" class="pick-up-size__label">XS</label>
+									</div>
+									<div class="pick-up-size__body-form">
+										<input id="s" type="radio" name="form[]" value="S" class="pick-up-size__radio">
+										<label for="s" class="pick-up-size__label">S</label>
+									</div>
+									<div class="pick-up-size__body-form">
+										<input id="m" type="radio" name="form[]" value="M" class="pick-up-size__radio">
+										<label for="m" class="pick-up-size__label">m</label>
+									</div>
+									<div class="pick-up-size__body-form">
+										<input id="l" type="radio" name="form[]" value="L" class="pick-up-size__radio">
+										<label for="l" class="pick-up-size__label">l</label>
+									</div>
+									<div class="pick-up-size__body-form">
+										<input id="xxl" type="radio" name="form[]" value="XXL" class="pick-up-size__radio">
+										<label for="xxl" class="pick-up-size__label">xxl</label>
+									</div>
+								</div>
+								<a data-popup="#size" href="#" class="pick-up-size__pick-up-size"><span>Подобрать размер</span></a>
+								<button type="submit" class="pick-up-size__btn btn btn_violet">Заказать</button>
+							</form>
+							<div class="block-info-popup__characteristics">
+								<div data-spollers class="block-info-popup__spollers spollers-characteristics">
+									<div class="spollers-characteristics__item">
+										<button type="button" data-spoller class="spollers-characteristics__title _spoller-active">Характеристики</button>
+										<div class="spollers-characteristics__body">
+											<ul class="spollers-characteristics__list">
+												<li>
+													<span>
+														Материал
+													</span>
+													<span>
+														100% хлопок
+													</span>
+												</li>
+												<li>
+													<span>
+														Нанесение
+													</span>
+													<span>
+														вышивка, термопечать
+													</span>
+												</li>
+												<li>
+													<span>
+														Торговая марка
+													</span>
+													<span>
+														100% хлопок
+													</span>
+												</li>
+												<li>
+													<span>
+														Плотность, г/м
+													</span>
+													<span>
+														150
+													</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
- -->
-
+	<div id="size" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#close"></use>
+					</svg>
+				</button>
+				<div class="popup__size size-popup">
+					<div class="size-popup__size-table table-size">
+						<label class="table-size__title">Таблица размеров</label>
+						<div class="table-size__table">
+							<ul class="table-size__list">
+								<li>
+									<span>XS</span>
+									<span>67/46</span>
+								</li>
+								<li>
+									<span>S</span>
+									<span>69/51</span>
+								</li>
+								<li>
+									<span>M</span>
+									<span>71/56</span>
+								</li>
+								<li>
+									<span>L</span>
+									<span>74/61</span>
+								</li>
+								<li>
+									<span>XL</span>
+									<span>76/66</span>
+								</li>
+								<li>
+									<span>2XL</span>
+									<span>79/71</span>
+								</li>
+								<li>
+									<span>3XL</span>
+									<span>81/76</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div id="preloader">
 		<!-- Стилі для прелоадера -->
-		<style>
+		<style class="preloader-style">
 			.preloader {
 				pointer-events: none;
 				z-index: 1000;
@@ -589,6 +810,13 @@
 		<!-- Скріпт прелоадера -->
 		<script>
 			(function() {
+				const preloaderStyle = document.querySelector('.preloader-style');
+				const rem = preloaderStyle.cloneNode(true);
+				preloaderStyle.remove();
+				const head = document.head;
+				head.append(rem);
+				console.log(head);
+
 				const preloaderImages = document.querySelectorAll('img');
 				const preloaderContainer = document.querySelector('#preloader');
 				const settings = {
@@ -677,6 +905,7 @@
 									htmlDocument.classList.add('loaded');
 								}, settings.delayRemovePreloader >= 500 ? settings.delayRemovePreloader - 500 : 0);
 								const intervalRemovePreloader = setInterval(() => {
+									preloaderStyle.remove();
 									preloader.remove();
 									clearInterval(intervalRemovePreloader);
 									clearInterval(timer);
@@ -688,12 +917,13 @@
 						}, 300);
 					}
 				} else {
+					preloaderStyle.remove();
 					preloaderContainer.remove();
 				}
 			})();
 		</script>
 	</div>
-	<script src="js/app.min.js?_v=20230101234540"></script>
+	<script src="js/app.min.js?_v=20230106000240"></script>
 </body>
 
 </html>

@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Gifts & Merch</title>
+	<title>Order Sewing</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-	<div class="wrapper wrapper_home">
+	<div class="wrapper wrapper_other">
 
 		<header data-lp class="header">
 			<div class="header__container">
@@ -136,184 +136,158 @@
 				<div class="mainscreen__container">
 					<div class="mainscreen__body">
 						<div class="mainscreen__content">
+							<div class="mainscreen__breadcrumb breadcrumb">
+								<ul class="breadcrumb__list">
+									<li class="breadcrumb__item">
+										<a href="home.html">Главная</a>
+									</li>
+									<li class="breadcrumb__item">
+										<a href="sewing.html">Пошив</a>
+									</li>
+									<li class="breadcrumb__item breadcrumb__item_active">
+										<a href="#">худи</a>
+									</li>
+								</ul>
+							</div>
 							<h1 class="mainscreen__title main-title">
-								Свежее дыхание в корпоративной жизни
+								Худи классическое
 							</h1>
 							<p class="mainscreen__subtitle subtitle">
-								Мы усовершенствовали процесс заказа продукции для того, чтобы Вы и Ваша компания
-								сконцентрировались на основных задачах и достигали поставленных целей.
+								Стоимость производства брендированной продукции на заказ расчитывается индивидуально. Цена зависит от сложности работы, брендирования, материалов, тиража и
+								срочности.
 							</p>
-							<div class="mainscreen__info info-items">
-								<div class="info-items__body">
-									<div class="info-items__item">
-										<div class="info-items__icon">
-											<svg>
-												<use xlink:href="img/icons/icons.svg#circle""></use>
-										</svg>
-									</div>
-									<div class=" info-items__text">
-													Высокое качество <span>ONLY</span>
-										</div>
-									</div>
-									<div class="info-items__item">
-										<div class="info-items__icon">
-											<svg>
-												<use xlink:href="img/icons/icons.svg#circle"></use>
-											</svg>
-										</div>
-										<div class="info-items__text">
-											Поддержка менеджера <span>24/7</span>
-										</div>
-									</div>
-									<div class="info-items__item">
-										<div class="info-items__icon">
-											<svg>
-												<use xlink:href="img/icons/icons.svg#circle"></use>
-											</svg>
-										</div>
-										<div class="info-items__text">
-											Выполнение заказа в <span>TURBO-режиме</span>
-										</div>
-									</div>
+							<ul class="mainscreen__other-patterns patterns-other-mainscreen">
+								<li class="patterns-other-mainscreen__item">
+									<a href="#">Худи оверсайз</a>
+								</li>
+								<li class="patterns-other-mainscreen__item">
+									<a href="#">Худи на замке</a>
+								</li>
+							</ul>
+							<div class="mainscreen__order-body body-order-mainscreen">
+								<div class="mainscreen__actions actions-mainscreen actions-mainscreen_order">
+									<a href="#" class="actions-mainscreen__btn btn btn_violet">Заказать просчет</a>
+									<span class="actions-mainscreen__info">Минимальное кол-во: <span>25</span></span>
 								</div>
-								<div class="info-items__media-picture"></div>
+								<form action="#" class="body-order-mainscreen__form pick-up-size">
+									<div class="pick-up-size__title">Размер</div>
+									<div class="pick-up-size__row">
+										<div class="pick-up-size__body-form">
+											<input checked id="xs" type="radio" name="form[]" value="XS" class="pick-up-size__radio">
+											<label for="xs" class="pick-up-size__label">XS</label>
+										</div>
+										<div class="pick-up-size__body-form">
+											<input id="s" type="radio" name="form[]" value="S" class="pick-up-size__radio">
+											<label for="s" class="pick-up-size__label">S</label>
+										</div>
+										<div class="pick-up-size__body-form">
+											<input id="m" type="radio" name="form[]" value="M" class="pick-up-size__radio">
+											<label for="m" class="pick-up-size__label">m</label>
+										</div>
+										<div class="pick-up-size__body-form">
+											<input id="l" type="radio" name="form[]" value="L" class="pick-up-size__radio">
+											<label for="l" class="pick-up-size__label">l</label>
+										</div>
+										<div class="pick-up-size__body-form">
+											<input id="xxl" type="radio" name="form[]" value="XXL" class="pick-up-size__radio">
+											<label for="xxl" class="pick-up-size__label">xxl</label>
+										</div>
+									</div>
+									<a href="#" class="pick-up-size__pick-up-size"><span>Подобрать размер</span></a>
+								</form>
 							</div>
 						</div>
-						<div data-da=".info-items__media-picture, 991.98,last" class="mainscreen__picture">
-							<picture><source srcset="img/mainscreen/two-girls.webp" type="image/webp"><img src="img/mainscreen/two-girls.png" alt="tho girls"></picture>
+						<div class="mainscreen__picture">
+							<picture><source srcset="img/mainscreen/sewing-bg.webp" type="image/webp"><img src="img/mainscreen/sewing-bg.png" alt="tho girls"></picture>
 						</div>
 					</div>
 				</div>
-				<div class="mainscreen__bg"></div>
 			</div>
-			<div class="page__popular popular">
-				<div class="popular__container">
-					<div class="popular__header">
-						<div class="popular__block-title title-block">
-							<h2 class="title-block__title">
-								Самое популярное
+			<div class="page__faq-sewing sewing-faq">
+				<div class="sewing-faq__container">
+					<div data-spollers class="sewing-faq__spollers spollers-faq">
+						<div class="spollers-faq__item">
+							<button type="button" data-spoller class="spollers-faq__title _spoller-active">
+								Материал
 								<svg>
-									<use xlink:href="img/icons/icons.svg#star"></use>
+									<use xlink:href="img/icons/icons.svg#arrow-down"></use>
 								</svg>
-							</h2>
-							<p class="title-block__subtitle">
-								Товары, которые наиболее часто заказывают наши клиенты
-							</p>
-						</div>
-						<a data-da=".popular__body,991.98,last" href="#" class="popular__link">
-							Все товары
-							<svg>
-								<use xlink:href="img/icons/icons.svg#arrow-long"></use>
-							</svg>
-						</a>
-					</div>
-					<div class="popular__body">
-						<div class="popular__cards">
-							<a href="#" class="popular__item">
-								<div class="popular__picture-ibg">
-									<picture><source srcset="img/home//popular/1.webp" type="image/webp"><img src="img/home//popular/1.jpg" alt=""></picture>
-								</div>
-							</a>
-							<a href="#" class="popular__item">
-								<div class="popular__picture-ibg">
-									<picture><source srcset="img/home//popular/2.webp" type="image/webp"><img src="img/home//popular/2.jpg" alt=""></picture>
-								</div>
-							</a>
-							<a href="#" class="popular__item">
-								<div class="popular__picture-ibg">
-									<picture><source srcset="img/home//popular/3.webp" type="image/webp"><img src="img/home//popular/3.jpg" alt=""></picture>
-								</div>
-							</a>
-							<a href="#" class="popular__item">
-								<div class="popular__picture-ibg">
-									<picture><source srcset="img/home//popular/4.webp" type="image/webp"><img src="img/home//popular/4.jpg" alt=""></picture>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="page__creative creative">
-				<div class="creative__container">
-					<div class="creative__block-title title-block">
-						<div data-wrap-child-text class="title-block__name">creative</div>
-						<h2 class="title-block__title">
-							Хотите удивить ваших коллег/партнеров необычными подарками?
-						</h2>
-						<p class="title-block__subtitle">
-							Выбирайте готовые подарочные наборы или укажите критерии по которым мы соберем для Вас уникальный
-							бокс.
-						</p>
-					</div>
-					<div class="creative__actions-block">
-						<a href="#" class="creative__btn btn btn_black">Перейти к наборам</a>
-						<a href="#" class="creative__btn btn btn_dark-white">Создать свой</a>
-					</div>
-				</div>
-			</div>
-			<div class="page__other-product product-other">
-				<div class="product-other__container">
-					<div class="product-other__body">
-						<a href="#" class="product-other__picture-ibg">
-							<picture><source srcset="img/home/other-product/1.webp" type="image/webp"><img src="img/home/other-product/1.jpg" alt="Фото одежды"></picture>
-						</a>
-						<div class="product-other__content">
-							<h3 class="product-other__title">
-								Помимо готовой продукции высокого качества, мы можем для Вас произвести одежду, аксессуры, вкусности и другое под заказ.
-							</h3>
-							<p class="product-other__subtitle">
-								Благодаря личному производству мы изготавливаем большие партии в короткие сроки, а так же у Вас всегда есть возможность кастомизировать изделия.
-							</p>
-							<div class="product-other__body-slider">
-								<div class="product-other__slider swiper">
-									<div class="product-other__wrapper swiper-wrapper">
-										<div class="product-other__slide swiper-slide">
-											<a href="#" class="product-other__icon-slider-ibg">
-												<picture><source srcset="img/home/other-product/slider/1.webp" type="image/webp"><img src="img/home/other-product/slider/1.png" alt=""></picture>
-											</a>
-										</div>
-										<div class="product-other__slide swiper-slide">
-											<a href="#" class="product-other__icon-slider-ibg">
-												<picture><source srcset="img/home/other-product/slider/2.webp" type="image/webp"><img src="img/home/other-product/slider/2.png" alt=""></picture>
-											</a>
-										</div>
-										<div class="product-other__slide swiper-slide">
-											<a href="#" class="product-other__icon-slider-ibg">
-												<picture><source srcset="img/home/other-product/slider/3.webp" type="image/webp"><img src="img/home/other-product/slider/3.png" alt=""></picture>
-											</a>
-										</div>
-										<div class="product-other__slide swiper-slide">
-											<a href="#" class="product-other__icon-slider-ibg">
-												<picture><source srcset="img/home/other-product/slider/4.webp" type="image/webp"><img src="img/home/other-product/slider/4.png" alt=""></picture>
-											</a>
-										</div>
-										<div class="product-other__slide swiper-slide">
-											<a href="#" class="product-other__icon-slider-ibg">
-												<picture><source srcset="img/home/other-product/slider/2.webp" type="image/webp"><img src="img/home/other-product/slider/2.png" alt=""></picture>
-											</a>
-										</div>
-										<div class="product-other__slide swiper-slide">
-											<a href="#" class="product-other__icon-slider-ibg">
-												<picture><source srcset="img/home/other-product/slider/1.webp" type="image/webp"><img src="img/home/other-product/slider/1.png" alt=""></picture>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="product-other__actions">
-									<div class="product-other__arrow product-other__arrow_left arrow-left">
-										<svg>
-											<use xlink:href="img/icons/icons.svg#arrow-left"></use>
-										</svg>
-									</div>
-									<div class="product-other__pagination"></div>
-									<div class="product-other__arrow product-other__arrow_right arrow-right">
-										<svg>
-											<use xlink:href="img/icons/icons.svg#arrow-right"></use>
-										</svg>
-									</div>
-								</div>
+							</button>
+							<div class="spollers-faq__body">
+								Вы можете заказать у нас пошив толстовок из любого вида материалов:
+								<ul class="spollers-faq__list">
+									<li class="spollers-faq__item-list">
+										Хлопок 100%
+									</li>
+									<li class="spollers-faq__item-list">
+										Хлопок/полиэстер 85/15%
+									</li>
+									<li class="spollers-faq__item-list">
+										Флис
+									</li>
+								</ul>
 							</div>
 						</div>
+						<div class="spollers-faq__item">
+							<button type="button" data-spoller class="spollers-faq__title _spoller-active">
+								Как заказать
+								<svg>
+									<use xlink:href="img/icons/icons.svg#arrow-down"></use>
+								</svg>
+							</button>
+							<div class="spollers-faq__body">
+								Выбирайте из готовых моделей или отправьте нам свой дизайн для пошива.
+							</div>
+						</div>
+						<div class="spollers-faq__item">
+							<button type="button" data-spoller class="spollers-faq__title _spoller-active">
+								Виды нанесения
+								<svg>
+									<use xlink:href="img/icons/icons.svg#arrow-down"></use>
+								</svg>
+							</button>
+							<div class="spollers-faq__body">
+								Вы можете заказать у нас пошив толстовок из любого вида материалов:
+								<ul class="spollers-faq__list">
+									<li class="spollers-faq__item-list">
+										Шелкография
+									</li>
+									<li class="spollers-faq__item-list">
+										Вышивка
+									</li>
+									<li class="spollers-faq__item-list">
+										Цифровая печать
+									</li>
+									<li class="spollers-faq__item-list">
+										Флекс
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="spollers-faq__item">
+							<button type="button" data-spoller class="spollers-faq__title _spoller-active">
+								Уход за товаром
+								<svg>
+									<use xlink:href="img/icons/icons.svg#arrow-down"></use>
+								</svg>
+							</button>
+							<div class="spollers-faq__body">
+								<ul class="spollers-faq__list spollers-faq__list_thief">
+									<li class="spollers-faq__item-list">
+										Не рекомендуем использовать моющие средства и стиральные порошки с отбеливателями и хлором.
+									</li>
+									<li class="spollers-faq__item-list">
+										Перед глажкой и стиркой желательно вывернуть изделие наизнанку.
+									</li>
+									<li class="spollers-faq__item-list">
+										Стирка в прохладной воде не выше 30°С без включения режима сушки
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div data-gallery class="sewing-faq__picture-ibg">
+						<picture><source srcset="img/sewing/order/1.webp" type="image/webp"><img src="img/sewing/order/1.jpg" alt=""></picture>
 					</div>
 				</div>
 			</div>
@@ -361,63 +335,6 @@
 								<button type="submit" class="form-merch__btn btn">Заказать</button>
 							</div>
 						</form>
-					</div>
-				</div>
-			</div>
-			<div class="page__cooperate cooperate">
-				<div class="cooperate__container">
-					<div class="cooperate__block-title title-block">
-						<h2 class="title-block__title">
-							С нами соотрудничают
-						</h2>
-					</div>
-					<div class="cooperate__slider-body">
-						<div class="cooperate__slider swiper">
-							<div class="cooperate__wrapper swiper-wrapper">
-								<div class="cooperate__slide swiper-slide">
-									<a href="#" class="cooperate__picture-ibg">
-										<picture><source srcset="img/sponsors/nike.webp" type="image/webp"><img src="img/sponsors/nike.png" alt="logo nike"></picture>
-									</a>
-								</div>
-								<div class="cooperate__slide swiper-slide">
-									<a href="#" class="cooperate__picture-ibg">
-										<picture><source srcset="img/sponsors/coca-cola.webp" type="image/webp"><img src="img/sponsors/coca-cola.png" alt="logo coca-cola"></picture>
-									</a>
-								</div>
-								<div class="cooperate__slide swiper-slide">
-									<a href="#" class="cooperate__picture-ibg">
-										<picture><source srcset="img/sponsors/weekend.webp" type="image/webp"><img src="img/sponsors/weekend.png" alt="logo weekend"></picture>
-									</a>
-								</div>
-								<div class="cooperate__slide swiper-slide">
-									<a href="#" class="cooperate__picture-ibg">
-										<picture><source srcset="img/sponsors/megogo.webp" type="image/webp"><img src="img/sponsors/megogo.png" alt="logo megogo"></picture>
-									</a>
-								</div>
-								<div class="cooperate__slide swiper-slide">
-									<a href="#" class="cooperate__picture-ibg">
-										<picture><source srcset="img/sponsors/crazybox.webp" type="image/webp"><img src="img/sponsors/crazybox.png" alt="logo crazybox"></picture>
-									</a>
-								</div>
-								<div class="cooperate__slide swiper-slide">
-									<a href="#" class="cooperate__picture-ibg">
-										<picture><source srcset="img/sponsors/crazybox.webp" type="image/webp"><img src="img/sponsors/crazybox.png" alt="logo crazybox"></picture>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="cooperate__actions">
-							<div class="cooperate__arrow cooperate__arrow_left arrow-left">
-								<svg>
-									<use xlink:href="img/icons/icons.svg#arrow-left"></use>
-								</svg>
-							</div>
-							<div class="cooperate__arrow cooperate__arrow_right arrow-right">
-								<svg>
-									<use xlink:href="img/icons/icons.svg#arrow-right"></use>
-								</svg>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
