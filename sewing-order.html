@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230106001446">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230107004401">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -189,7 +189,7 @@
 			overscroll-behavior: none;
 		}
 
-		.loading body {
+		.wrapper {
 			opacity: 0;
 			visibility: hidden;
 		}
@@ -205,12 +205,141 @@
 			transition: all 0.5s ease 0s;
 		}
 
-		.loaded body {
+		.loaded .wrapper {
 			transition: opacity 0.5s ease 0s;
 			opacity: 1;
 			visibility: visible;
 		}
 	</style>
+	<!-- Скріпт прелоадера -->
+	<script id="preloader">
+		(function() {
+			const preloaderContainer = document.querySelector('#preloader');
+			let preloader, preloaderBody, showPecentLoad, showLineLoad;
+			const htmlDocument = document.documentElement;
+			const settings = {
+				// Затримка перед видаленням прелоадера з html після закінчення завантаження
+				delayRemovePreloader: 500,
+				// Функціонал відсоткового відображення завантаження
+				counter: true,
+				// Функціонал лінійного відображення завантаження
+				line: false,
+				// // Функціонал кастомного відображення різних елементів (можна редагувати) - для увімкнення перевести init в позицію true.
+				custom: {
+					init: true,
+					// Елементи які потрібно додавати в preloader__body
+					body: `
+							<div class="preloader__one preloader__one_one"></div>
+							<div class="preloader__one preloader__one_two"></div>
+							<div class="preloader__one preloader__one_three"></div>
+							<div class="preloader__one preloader__one_four"></div>
+							<div class="preloader__two preloader__two_five"></div>
+							<div class="preloader__two preloader__two_six"></div>
+							<div class="preloader__two preloader__two_seven"></div>
+							<div class="preloader__two preloader__two_eight"></div>
+							`
+				},
+			};
+			const interval = setInterval(() => {
+				if (document.body) {
+					const preloaderTemplate = `
+								<div class="preloader">
+									<div class="preloader__body">
+										${settings.custom.init ? settings.custom.body : ''}
+										${settings.counter ? '<div class="preloader__counter">0%</div>' : ''}
+										${settings.line ? '<div class="preloader__line"><span></span></div>' : ''}
+									</div>
+								</div>
+							`;
+					htmlDocument.insertAdjacentHTML("beforeend", preloaderTemplate);
+
+					preloader = document.querySelector('.preloader');
+					preloaderBody = preloader.querySelector('.preloader__body');
+					showPecentLoad = document.querySelector('.preloader__counter');
+					showLineLoad = document.querySelector('.preloader__line span');
+					clearInterval(interval);
+				}
+			}, 100);
+
+			const checkInterval = setInterval(() => {
+				const mainScriptsTag = document.querySelector('[data-main-script]');
+				if (mainScriptsTag) {
+					clearInterval(checkInterval);
+					const preloaderImages = document.querySelectorAll('img');
+					const preloaderStyle = document.querySelector('.preloader-style');
+					if (preloaderImages.length) {
+
+						let imagesLoadedCount = counter = progress = 0;
+
+						htmlDocument.classList.add('loading');
+						htmlDocument.classList.add('lock');
+						window.addEventListener("load", () => htmlDocument.classList.add('download-done'));
+
+						preloaderImages.forEach(preloaderImage => {
+							const imgClone = document.createElement('img');
+							if (imgClone) {
+								imgClone.onload = imageLoaded;
+								imgClone.onerror = imageLoaded;
+								preloaderImage.dataset.src ? imgClone.src = preloaderImage.dataset.src : imgClone.src = preloaderImage.src;
+							}
+						});
+
+						function setValueProgress(progress) {
+							showPecentLoad ? showPecentLoad.innerText = `${progress}%` : null;
+							showLineLoad ? showLineLoad.style.width = `${progress}%` : null;
+						}
+						showPecentLoad ? setValueProgress(progress) : null;
+
+						function imageLoaded() {
+							imagesLoadedCount++;
+							progress = Math.round((100 / preloaderImages.length) * imagesLoadedCount);
+
+							const intervalId = setInterval(() => {
+								counter >= progress ? clearInterval(intervalId) : setValueProgress(++counter);
+								counter >= 100 ? addLoadedClass() : null;
+							}, 40);
+
+						}
+
+						function addLoadedClass() {
+							if (this.isRun == true) return;
+							this.isRun = true;
+
+							let timer = setInterval(() => {
+								if (htmlDocument.closest('.download-done')) {
+									htmlDocument.classList.remove('lock');
+									htmlDocument.classList.remove('loading');
+									setTimeout(() => {
+										htmlDocument.classList.remove('download-done');
+										htmlDocument.classList.add('loaded');
+									}, settings.delayRemovePreloader >= 500 ? settings.delayRemovePreloader - 500 : 0);
+									const intervalRemovePreloader = setInterval(() => {
+										preloader.remove();
+										if (preloaderStyle) {
+											preloaderStyle.remove();
+										}
+										clearInterval(intervalRemovePreloader);
+										clearInterval(timer);
+										preloaderContainer.remove();
+										mainScriptsTag.removeAttribute('data-main-script');
+									}, settings.delayRemovePreloader);
+								} else {
+									return;
+								}
+							}, 300);
+						}
+					} else {
+						if (preloaderStyle) {
+							preloaderStyle.remove();
+						}
+						preloaderContainer.remove();
+					}
+				}
+			}, 100);
+
+
+		})();
+	</script>
 </head>
 
 <body>
@@ -878,25 +1007,225 @@
 			</div>
 		</div>
 	</div>
-	<div id="preloader">
-		<!-- Скріпт прелоадера -->
-		<script>
-			(function() {
-				const preloaderImages = document.querySelectorAll('img');
-				const preloaderContainer = document.querySelector('#preloader');
-				const preloaderStyle = document.querySelector('.preloader-style');
-				const settings = {
-					// Затримка перед видаленням прелоадера з html після закінчення завантаження
-					delayRemovePreloader: 500,
-					// Функціонал відсоткового відображення завантаження
-					counter: true,
-					// Функціонал лінійного відображення завантаження
-					line: false,
-					// // Функціонал кастомного відображення різних елементів (можна редагувати) - для увімкнення перевести init в позицію true.
-					custom: {
-						init: true,
-						// Елементи які потрібно додавати в preloader__body
-						body: `
+	<!-- Стилі для прелоадера -->
+	<style class="preloader-style">
+		.preloader {
+			pointer-events: none;
+			z-index: 1000;
+			position: fixed;
+			width: 100vw;
+			height: 100vh;
+			top: 0;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			background: #F6F3F7;
+		}
+
+		.preloader * {
+			box-sizing: border-box;
+		}
+
+		.preloader__body {
+			padding: 0.93rem;
+			display: flex;
+			flex-direction: column;
+
+			position: relative;
+			width: 280px;
+			height: 280px;
+		}
+
+		.preloader__one,
+		.preloader__two {
+			position: absolute;
+			width: 175px;
+			height: 175px;
+			border-radius: 50%;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+		}
+
+		.preloader__one {
+			animation: spin1 2.3s infinite linear;
+		}
+
+		.preloader__two {
+			transform: rotate(45deg);
+			animation: spin2 2.3s infinite linear;
+		}
+
+		.preloader__one_one,
+		.preloader__two_five {
+			border-top: 3px solid transparent;
+		}
+
+		.preloader__one_two,
+		.preloader__two_six {
+			border-right: 3px solid transparent;
+		}
+
+		.preloader__one_three,
+		.preloader__two_seven {
+			border-bottom: 3px solid transparent;
+		}
+
+		.preloader__one_four,
+		.preloader__two_eight {
+			border-left: 3px solid transparent;
+		}
+
+		.preloader__one_one {
+			top: -100px;
+		}
+
+		.preloader__one_two {
+			right: -100px;
+		}
+
+		.preloader__one_three {
+			bottom: -100px;
+		}
+
+		.preloader__one_four {
+			left: -100px;
+		}
+
+		.preloader__two_five {
+			right: -70.5px;
+			bottom: 70.5px;
+		}
+
+		.preloader__two_six {
+			left: 70.5px;
+			top: 70.5px;
+		}
+
+		.preloader__two_seven {
+			left: -70.5px;
+			top: 70.5px;
+		}
+
+		.preloader__two_eight {
+			right: 70.5px;
+			top: -70.5px;
+		}
+
+		@keyframes spin1 {
+			from {
+				transform: rotate(0deg);
+			}
+
+			to {
+				transform: rotate(360deg);
+			}
+
+			0% {
+				border-color: #d7caf2;
+			}
+
+			50% {
+				border-color: #9864ff;
+			}
+
+			100% {
+				border-color: #d7caf2;
+			}
+		}
+
+		@keyframes spin2 {
+			from {
+				transform: rotate(45deg);
+			}
+
+			to {
+				transform: rotate(405deg);
+			}
+
+			0% {
+				border-color: #d7caf2;
+			}
+
+			50% {
+				border-color: #9864ff;
+			}
+
+			100% {
+				border-color: #d7caf2;
+			}
+		}
+
+		.preloader__counter {
+			font-size: 20px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: rgba(152, 100, 255, 0.8);
+			font-family: sans-serif;
+		}
+
+		.preloader__line span {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 3px;
+			background-color: rgba(152, 100, 255, 0.8);
+			border-radius: 16px;
+			transition: width 0.3s ease 0s;
+		}
+
+		.lock body {
+			overflow: hidden;
+			touch-action: none;
+			overscroll-behavior: none;
+		}
+
+		.wrapper {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		.loading .preloader {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.loaded .preloader {
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.5s ease 0s;
+		}
+
+		.loaded .wrapper {
+			transition: opacity 0.5s ease 0s;
+			opacity: 1;
+			visibility: visible;
+		}
+	</style>
+	<!-- Скріпт прелоадера -->
+	<script id="preloader">
+		(function() {
+			const preloaderContainer = document.querySelector('#preloader');
+			let preloader, preloaderBody, showPecentLoad, showLineLoad;
+			const htmlDocument = document.documentElement;
+			const settings = {
+				// Затримка перед видаленням прелоадера з html після закінчення завантаження
+				delayRemovePreloader: 500,
+				// Функціонал відсоткового відображення завантаження
+				counter: true,
+				// Функціонал лінійного відображення завантаження
+				line: false,
+				// // Функціонал кастомного відображення різних елементів (можна редагувати) - для увімкнення перевести init в позицію true.
+				custom: {
+					init: true,
+					// Елементи які потрібно додавати в preloader__body
+					body: `
 							<div class="preloader__one preloader__one_one"></div>
 							<div class="preloader__one preloader__one_two"></div>
 							<div class="preloader__one preloader__one_three"></div>
@@ -905,95 +1234,110 @@
 							<div class="preloader__two preloader__two_six"></div>
 							<div class="preloader__two preloader__two_seven"></div>
 							<div class="preloader__two preloader__two_eight"></div>
-				`
-					},
-				};
-
-				if (preloaderImages.length) {
+							`
+				},
+			};
+			const interval = setInterval(() => {
+				if (document.body) {
 					const preloaderTemplate = `
-					<div class="preloader">
-						<div class="preloader__body">
-							${settings.custom.init ? settings.custom.body : ''}
-							${settings.counter ? '<div class="preloader__counter">0%</div>' : ''}
-							${settings.line ? '<div class="preloader__line"><span></span></div>' : ''}
-						</div>
-					</div>`;
-					document.documentElement.insertAdjacentHTML("beforeend", preloaderTemplate);
+								<div class="preloader">
+									<div class="preloader__body">
+										${settings.custom.init ? settings.custom.body : ''}
+										${settings.counter ? '<div class="preloader__counter">0%</div>' : ''}
+										${settings.line ? '<div class="preloader__line"><span></span></div>' : ''}
+									</div>
+								</div>
+							`;
+					htmlDocument.insertAdjacentHTML("beforeend", preloaderTemplate);
 
-					const
-						preloader = document.querySelector('.preloader'),
-						showPecentLoad = document.querySelector('.preloader__counter'),
-						showLineLoad = document.querySelector('.preloader__line span'),
-						htmlDocument = document.documentElement;
-
-					let imagesLoadedCount = counter = progress = 0;
-
-					htmlDocument.classList.add('loading');
-					htmlDocument.classList.add('lock');
-					window.addEventListener("load", () => htmlDocument.classList.add('download-done'));
-
-					preloaderImages.forEach(preloaderImage => {
-						const imgClone = document.createElement('img');
-						if (imgClone) {
-							imgClone.onload = imageLoaded;
-							imgClone.onerror = imageLoaded;
-							preloaderImage.dataset.src ? imgClone.src = preloaderImage.dataset.src : imgClone.src = preloaderImage.src;
-						}
-					});
-
-					function setValueProgress(progress) {
-						showPecentLoad ? showPecentLoad.innerText = `${progress}%` : null;
-						showLineLoad ? showLineLoad.style.width = `${progress}%` : null;
-					}
-					showPecentLoad ? setValueProgress(progress) : null;
-
-					function imageLoaded() {
-						imagesLoadedCount++;
-						progress = Math.round((100 / preloaderImages.length) * imagesLoadedCount);
-
-						const intervalId = setInterval(() => {
-							counter >= progress ? clearInterval(intervalId) : setValueProgress(++counter);
-							counter >= 100 ? addLoadedClass() : null;
-						}, 40);
-
-					}
-
-					function addLoadedClass() {
-						if (this.isRun == true) return;
-						this.isRun = true;
-
-						let timer = setInterval(() => {
-							if (htmlDocument.closest('.download-done')) {
-								htmlDocument.classList.remove('lock');
-								htmlDocument.classList.remove('loading');
-								setTimeout(() => {
-									htmlDocument.classList.remove('download-done');
-									htmlDocument.classList.add('loaded');
-								}, settings.delayRemovePreloader >= 500 ? settings.delayRemovePreloader - 500 : 0);
-								const intervalRemovePreloader = setInterval(() => {
-									preloader.remove();
-									if (preloaderStyle) {
-										preloaderStyle.remove();
-									}
-									clearInterval(intervalRemovePreloader);
-									clearInterval(timer);
-									preloaderContainer.remove();
-								}, settings.delayRemovePreloader);
-							} else {
-								return;
-							}
-						}, 300);
-					}
-				} else {
-					if (preloaderStyle) {
-						preloaderStyle.remove();
-					}
-					preloaderContainer.remove();
+					preloader = document.querySelector('.preloader');
+					preloaderBody = preloader.querySelector('.preloader__body');
+					showPecentLoad = document.querySelector('.preloader__counter');
+					showLineLoad = document.querySelector('.preloader__line span');
+					clearInterval(interval);
 				}
-			})();
-		</script>
-	</div>
-	<script src="js/app.min.js?_v=20230106001446"></script>
+			}, 100);
+
+			const checkInterval = setInterval(() => {
+				const mainScriptsTag = document.querySelector('[data-main-script]');
+				if (mainScriptsTag) {
+					clearInterval(checkInterval);
+					const preloaderImages = document.querySelectorAll('img');
+					const preloaderStyle = document.querySelector('.preloader-style');
+					if (preloaderImages.length) {
+
+						let imagesLoadedCount = counter = progress = 0;
+
+						htmlDocument.classList.add('loading');
+						htmlDocument.classList.add('lock');
+						window.addEventListener("load", () => htmlDocument.classList.add('download-done'));
+
+						preloaderImages.forEach(preloaderImage => {
+							const imgClone = document.createElement('img');
+							if (imgClone) {
+								imgClone.onload = imageLoaded;
+								imgClone.onerror = imageLoaded;
+								preloaderImage.dataset.src ? imgClone.src = preloaderImage.dataset.src : imgClone.src = preloaderImage.src;
+							}
+						});
+
+						function setValueProgress(progress) {
+							showPecentLoad ? showPecentLoad.innerText = `${progress}%` : null;
+							showLineLoad ? showLineLoad.style.width = `${progress}%` : null;
+						}
+						showPecentLoad ? setValueProgress(progress) : null;
+
+						function imageLoaded() {
+							imagesLoadedCount++;
+							progress = Math.round((100 / preloaderImages.length) * imagesLoadedCount);
+
+							const intervalId = setInterval(() => {
+								counter >= progress ? clearInterval(intervalId) : setValueProgress(++counter);
+								counter >= 100 ? addLoadedClass() : null;
+							}, 40);
+
+						}
+
+						function addLoadedClass() {
+							if (this.isRun == true) return;
+							this.isRun = true;
+
+							let timer = setInterval(() => {
+								if (htmlDocument.closest('.download-done')) {
+									htmlDocument.classList.remove('lock');
+									htmlDocument.classList.remove('loading');
+									setTimeout(() => {
+										htmlDocument.classList.remove('download-done');
+										htmlDocument.classList.add('loaded');
+									}, settings.delayRemovePreloader >= 500 ? settings.delayRemovePreloader - 500 : 0);
+									const intervalRemovePreloader = setInterval(() => {
+										preloader.remove();
+										if (preloaderStyle) {
+											preloaderStyle.remove();
+										}
+										clearInterval(intervalRemovePreloader);
+										clearInterval(timer);
+										preloaderContainer.remove();
+										mainScriptsTag.removeAttribute('data-main-script');
+									}, settings.delayRemovePreloader);
+								} else {
+									return;
+								}
+							}, 300);
+						}
+					} else {
+						if (preloaderStyle) {
+							preloaderStyle.remove();
+						}
+						preloaderContainer.remove();
+					}
+				}
+			}, 100);
+
+
+		})();
+	</script>
+	<script data-main-script src="js/app.min.js?_v=20230107004401"></script>
 </body>
 
 </html>
