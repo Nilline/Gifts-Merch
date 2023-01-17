@@ -1,0 +1,61 @@
+{
+	"goods": {
+		"all-goods": [
+			{
+				"id": 1,
+				"category": "sweatshirts",
+				"title": "Рюкзак Elleven Compu-Friendly для контрольно-пропускных пунктов",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85",
+					"white": "#F1F1F1"
+				},
+				"price": {
+					"value": "2 789.99"
+				},
+				"images": [
+					{
+						"src": "img/goods/1.png"
+					},
+					{
+						"src": "img/goods/1.png"
+					}
+				],
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 2,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "2 199.99"
+				},
+				"images": [
+					{
+						"src": "img/goods/1.png"
+					},
+					{
+						"src": "img/goods/1.png"
+					}
+				],
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			}
+		]
+	}
+}

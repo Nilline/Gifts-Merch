@@ -6,11 +6,11 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230107004401">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230117131835">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Стилі для прелоадера -->
+	<!-- Стили для прелоадера -->
 	<style class="preloader-style">
 		.preloader {
 			pointer-events: none;
@@ -23,7 +23,6 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-
 			background: #F6F3F7;
 		}
 
@@ -35,7 +34,6 @@
 			padding: 0.93rem;
 			display: flex;
 			flex-direction: column;
-
 			position: relative;
 			width: 280px;
 			height: 280px;
@@ -211,23 +209,23 @@
 			visibility: visible;
 		}
 	</style>
-	<!-- Скріпт прелоадера -->
+	<!-- Скрипт прелоадера -->
 	<script id="preloader">
 		(function() {
 			const preloaderContainer = document.querySelector('#preloader');
 			let preloader, preloaderBody, showPecentLoad, showLineLoad;
 			const htmlDocument = document.documentElement;
 			const settings = {
-				// Затримка перед видаленням прелоадера з html після закінчення завантаження
+				// Задержка перед удалением прелоадера из html после окончания загрузки
 				delayRemovePreloader: 500,
 				// Функціонал відсоткового відображення завантаження
 				counter: true,
-				// Функціонал лінійного відображення завантаження
+				// Функционал процентного отображения загрузки
 				line: false,
-				// // Функціонал кастомного відображення різних елементів (можна редагувати) - для увімкнення перевести init в позицію true.
+				// Функционал кастомного отображения разных элементов (можно редактировать) – для включения перевести init в позицию true.
 				custom: {
 					init: true,
-					// Елементи які потрібно додавати в preloader__body
+					// Элементы, которые нужно добавлять в preloader__body
 					body: `
 							<div class="preloader__one preloader__one_one"></div>
 							<div class="preloader__one preloader__one_two"></div>
@@ -240,8 +238,9 @@
 							`
 				},
 			};
-			const interval = setInterval(() => {
+			const checkBodyinterval = setInterval(() => {
 				if (document.body) {
+					clearInterval(checkBodyinterval);
 					const preloaderTemplate = `
 								<div class="preloader">
 									<div class="preloader__body">
@@ -252,29 +251,24 @@
 								</div>
 							`;
 					htmlDocument.insertAdjacentHTML("beforeend", preloaderTemplate);
-
 					preloader = document.querySelector('.preloader');
 					preloaderBody = preloader.querySelector('.preloader__body');
 					showPecentLoad = document.querySelector('.preloader__counter');
 					showLineLoad = document.querySelector('.preloader__line span');
-					clearInterval(interval);
 				}
-			}, 100);
-
-			const checkInterval = setInterval(() => {
+			}, 10);
+			const checkScriptsInterval = setInterval(() => {
 				const mainScriptsTag = document.querySelector('[data-main-script]');
 				if (mainScriptsTag) {
-					clearInterval(checkInterval);
-					const preloaderImages = document.querySelectorAll('img');
+					clearInterval(checkScriptsInterval);
+					let preloaderImages = document.querySelectorAll('img');
 					const preloaderStyle = document.querySelector('.preloader-style');
 					if (preloaderImages.length) {
-
+						const intervalDelayCuonter = 4 * preloaderImages.length < 40 ? 4 * preloaderImages.length : 40;
 						let imagesLoadedCount = counter = progress = 0;
-
 						htmlDocument.classList.add('loading');
 						htmlDocument.classList.add('lock');
 						window.addEventListener("load", () => htmlDocument.classList.add('download-done'));
-
 						preloaderImages.forEach(preloaderImage => {
 							const imgClone = document.createElement('img');
 							if (imgClone) {
@@ -293,12 +287,10 @@
 						function imageLoaded() {
 							imagesLoadedCount++;
 							progress = Math.round((100 / preloaderImages.length) * imagesLoadedCount);
-
 							const intervalId = setInterval(() => {
 								counter >= progress ? clearInterval(intervalId) : setValueProgress(++counter);
 								counter >= 100 ? addLoadedClass() : null;
-							}, 40);
-
+							}, intervalDelayCuonter);
 						}
 
 						function addLoadedClass() {
@@ -335,9 +327,7 @@
 						preloaderContainer.remove();
 					}
 				}
-			}, 100);
-
-
+			}, 10);
 		})();
 	</script>
 </head>
@@ -602,11 +592,11 @@
 						<use xlink:href="img/icons/icons.svg#basket"></use>
 					</svg>
 				</div>
-				<span data-basket-counter="0" class="basket__counter"></span>
-				<span data-basket-total="0" class="basket__total-value"></span>
+				<span class="basket__counter"></span>
+				<span class="basket__total-value"></span>
 				<div class="basket__questions">
 					<a href="#" class="basket__continue">Продолжить покупки</a>
-					<a href="#" class="basket__go-basket">В корзину</a>
+					<a data-popup="#basket" href="#" class="basket__go-basket">В корзину</a>
 					<span class="basket__close">
 						<svg>
 							<use xlink:href="img/icons/icons.svg#close"></use>
@@ -629,8 +619,8 @@
 						</div>
 						<div data-da=".footer__media-social,649.98,0" class="footer__contacts contacts-footer">
 							<div class="contacts-footer__body-links">
-								<a href="tel:+380123456789" class="contacts-footer__tel">+380 123 456 789</a>
-								<a href="mailto:example@gmail.com" class="contacts-footer__email">example@gmail.com</a>
+								<a href="tel:+380123456789" class="contacts-footer__tel link">+380 123 456 789</a>
+								<a href="mailto:example@gmail.com" class="contacts-footer__email link">example@gmail.com</a>
 							</div>
 							<div class="contacts-footer__social">
 								<a href="#" class="contacts-footer__link contacts-footer__link_facebook">
@@ -657,16 +647,16 @@
 							<h4 class="nav-footer__label">Категории</h4>
 							<ul class="nav-footer__list">
 								<li class="nav-footer__item">
-									<a href="#" class="nav-footer__link">Пошив</a>
+									<a href="#" class="nav-footer__link link">Пошив</a>
 								</li>
 								<li class="nav-footer__item">
-									<a href="#" class="nav-footer__link">Все товары</a>
+									<a href="#" class="nav-footer__link link">Все товары</a>
 								</li>
 								<li class="nav-footer__item">
-									<a href="#" class="nav-footer__link">Наборы</a>
+									<a href="#" class="nav-footer__link link">Наборы</a>
 								</li>
 								<li class="nav-footer__item">
-									<a href="#" class="nav-footer__link">Производство</a>
+									<a href="#" class="nav-footer__link link">Производство</a>
 								</li>
 							</ul>
 						</nav>
@@ -674,13 +664,13 @@
 							<h4 class="nav-footer__label">Информация</h4>
 							<ul class="nav-footer__list">
 								<li class="nav-footer__item">
-									<a href="#" class="nav-footer__link">О нас</a>
+									<a href="#" class="nav-footer__link link">О нас</a>
 								</li>
 								<li class="nav-footer__item">
-									<a href="#" class="nav-footer__link">Информация</a>
+									<a href="#" class="nav-footer__link link">Информация</a>
 								</li>
 								<li class="nav-footer__item">
-									<a href="#" class="nav-footer__link">Контакты</a>
+									<a href="#" class="nav-footer__link link">Контакты</a>
 								</li>
 							</ul>
 						</nav>
@@ -720,7 +710,7 @@
 						<use xlink:href="img/icons/icons.svg#close"></use>
 					</svg>
 				</button>
-				<div class="popup__goods goods-popup">
+				<form data-add-to-cart action="#" class="popup__goods goods-popup">
 					<div class="goods-popup__sliders">
 						<div class="goods-popup__slider goods-popup__slider-main swiper">
 							<div class="goods-popup__wrapper swiper-wrapper">
@@ -785,25 +775,25 @@
 								</li>
 							</ul>
 						</div>
-						<h3 class="goods-popup__name">
+						<h3 data-add-to-cart-name class="goods-popup__name">
 							EL003 Elleven Checkpoint-Friendly Compu-Backpack
 						</h3>
-						<form action="#" class="goods-popup__colors colors">
+						<div class="goods-popup__colors colors">
 							<div data-color="#524983" class="colors__color">
-								<input type="radio" name="form[]" value="" class="colors__radio">
+								<input checked data-add-to-cart-color type="radio" name="color" value="" class="colors__radio">
 								<label class="colors__label-color"></label>
 							</div>
 							<div data-color="#309F85" class="colors__color">
-								<input type="radio" name="form[]" value="" class="colors__radio">
+								<input data-add-to-cart-color type="radio" name="color" value="" class="colors__radio">
 								<label class="colors__label-color"></label>
 							</div>
 							<div data-color="#F1F1F1" class="colors__color">
-								<input type="radio" name="form[]" value="" class="colors__radio">
+								<input data-add-to-cart-color type="radio" name="color" value="" class="colors__radio">
 								<label class="colors__label-color"></label>
 							</div>
-						</form>
+						</div>
 						<div class="goods-popup__price-block">
-							From Price <span>$76.43</span>
+							From Price <span data-add-to-cart-price>2 789.69</span> <span data-add-to-cart-price-currency>грн</span>
 						</div>
 						<p class="goods-popup__text">
 							This exclusive design has a designated laptop-only section that unfolds to lay flat on the X-ray belt to increase your speed, convenience and security. (Pens,
@@ -811,33 +801,33 @@
 						</p>
 						<div class="goods-popup__media-992"></div>
 						<div class="goods-popup__info-block block-info-popup">
-							<form data-da=".goods-popup__media-992,991.98,first" action="#" class="block-info-popup__form pick-up-size">
+							<div data-da=".goods-popup__media-992,991.98,first" class="block-info-popup__form pick-up-size">
 								<div class="pick-up-size__title">Размер</div>
 								<div class="pick-up-size__row">
 									<div class="pick-up-size__body-form">
-										<input checked id="xs" type="radio" name="form[]" value="XS" class="pick-up-size__radio">
+										<input data-add-to-cart-size id="xs" type="radio" name="size" data-error-text="Выберите размер" value="XS" class="pick-up-size__radio">
 										<label for="xs" class="pick-up-size__label">XS</label>
 									</div>
 									<div class="pick-up-size__body-form">
-										<input id="s" type="radio" name="form[]" value="S" class="pick-up-size__radio">
+										<input data-add-to-cart-size id="s" type="radio" name="size" data-error-text="Выберите размер" value="S" class="pick-up-size__radio">
 										<label for="s" class="pick-up-size__label">S</label>
 									</div>
 									<div class="pick-up-size__body-form">
-										<input id="m" type="radio" name="form[]" value="M" class="pick-up-size__radio">
+										<input data-add-to-cart-size id="m" type="radio" name="size" data-error-text="Выберите размер" value="M" class="pick-up-size__radio">
 										<label for="m" class="pick-up-size__label">m</label>
 									</div>
 									<div class="pick-up-size__body-form">
-										<input id="l" type="radio" name="form[]" value="L" class="pick-up-size__radio">
+										<input data-add-to-cart-size id="l" type="radio" name="size" data-error-text="Выберите размер" value="L" class="pick-up-size__radio">
 										<label for="l" class="pick-up-size__label">l</label>
 									</div>
 									<div class="pick-up-size__body-form">
-										<input id="xxl" type="radio" name="form[]" value="XXL" class="pick-up-size__radio">
+										<input data-add-to-cart-size id="xxl" type="radio" name="size" data-error-text="Выберите размер" value="XXL" class="pick-up-size__radio">
 										<label for="xxl" class="pick-up-size__label">xxl</label>
 									</div>
 								</div>
 								<a data-popup="#size" href="#" class="pick-up-size__pick-up-size"><span>Подобрать размер</span></a>
-								<button type="submit" class="pick-up-size__btn btn btn_violet">Заказать</button>
-							</form>
+								<button data-add-to-cart-button type="submit" class="pick-up-size__btn btn btn_violet">Заказать</button>
+							</div>
 							<div class="block-info-popup__characteristics">
 								<div data-spollers class="block-info-popup__spollers spollers-characteristics">
 									<div class="spollers-characteristics__item">
@@ -883,7 +873,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</form>
 			</div>
 		</div>
 	</div>
@@ -935,337 +925,90 @@
 			</div>
 		</div>
 	</div>
-	<!-- Стилі для прелоадера -->
-	<style class="preloader-style">
-		.preloader {
-			pointer-events: none;
-			z-index: 1000;
-			position: fixed;
-			width: 100vw;
-			height: 100vh;
-			top: 0;
-			left: 0;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
-			background: #F6F3F7;
-		}
-
-		.preloader * {
-			box-sizing: border-box;
-		}
-
-		.preloader__body {
-			padding: 0.93rem;
-			display: flex;
-			flex-direction: column;
-
-			position: relative;
-			width: 280px;
-			height: 280px;
-		}
-
-		.preloader__one,
-		.preloader__two {
-			position: absolute;
-			width: 175px;
-			height: 175px;
-			border-radius: 50%;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			margin: auto;
-		}
-
-		.preloader__one {
-			animation: spin1 2.3s infinite linear;
-		}
-
-		.preloader__two {
-			transform: rotate(45deg);
-			animation: spin2 2.3s infinite linear;
-		}
-
-		.preloader__one_one,
-		.preloader__two_five {
-			border-top: 3px solid transparent;
-		}
-
-		.preloader__one_two,
-		.preloader__two_six {
-			border-right: 3px solid transparent;
-		}
-
-		.preloader__one_three,
-		.preloader__two_seven {
-			border-bottom: 3px solid transparent;
-		}
-
-		.preloader__one_four,
-		.preloader__two_eight {
-			border-left: 3px solid transparent;
-		}
-
-		.preloader__one_one {
-			top: -100px;
-		}
-
-		.preloader__one_two {
-			right: -100px;
-		}
-
-		.preloader__one_three {
-			bottom: -100px;
-		}
-
-		.preloader__one_four {
-			left: -100px;
-		}
-
-		.preloader__two_five {
-			right: -70.5px;
-			bottom: 70.5px;
-		}
-
-		.preloader__two_six {
-			left: 70.5px;
-			top: 70.5px;
-		}
-
-		.preloader__two_seven {
-			left: -70.5px;
-			top: 70.5px;
-		}
-
-		.preloader__two_eight {
-			right: 70.5px;
-			top: -70.5px;
-		}
-
-		@keyframes spin1 {
-			from {
-				transform: rotate(0deg);
-			}
-
-			to {
-				transform: rotate(360deg);
-			}
-
-			0% {
-				border-color: #d7caf2;
-			}
-
-			50% {
-				border-color: #9864ff;
-			}
-
-			100% {
-				border-color: #d7caf2;
-			}
-		}
-
-		@keyframes spin2 {
-			from {
-				transform: rotate(45deg);
-			}
-
-			to {
-				transform: rotate(405deg);
-			}
-
-			0% {
-				border-color: #d7caf2;
-			}
-
-			50% {
-				border-color: #9864ff;
-			}
-
-			100% {
-				border-color: #d7caf2;
-			}
-		}
-
-		.preloader__counter {
-			font-size: 20px;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			color: rgba(152, 100, 255, 0.8);
-			font-family: sans-serif;
-		}
-
-		.preloader__line span {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			height: 3px;
-			background-color: rgba(152, 100, 255, 0.8);
-			border-radius: 16px;
-			transition: width 0.3s ease 0s;
-		}
-
-		.lock body {
-			overflow: hidden;
-			touch-action: none;
-			overscroll-behavior: none;
-		}
-
-		.wrapper {
-			opacity: 0;
-			visibility: hidden;
-		}
-
-		.loading .preloader {
-			opacity: 1;
-			visibility: visible;
-		}
-
-		.loaded .preloader {
-			opacity: 0;
-			visibility: hidden;
-			transition: all 0.5s ease 0s;
-		}
-
-		.loaded .wrapper {
-			transition: opacity 0.5s ease 0s;
-			opacity: 1;
-			visibility: visible;
-		}
-	</style>
-	<!-- Скріпт прелоадера -->
-	<script id="preloader">
-		(function() {
-			const preloaderContainer = document.querySelector('#preloader');
-			let preloader, preloaderBody, showPecentLoad, showLineLoad;
-			const htmlDocument = document.documentElement;
-			const settings = {
-				// Затримка перед видаленням прелоадера з html після закінчення завантаження
-				delayRemovePreloader: 500,
-				// Функціонал відсоткового відображення завантаження
-				counter: true,
-				// Функціонал лінійного відображення завантаження
-				line: false,
-				// // Функціонал кастомного відображення різних елементів (можна редагувати) - для увімкнення перевести init в позицію true.
-				custom: {
-					init: true,
-					// Елементи які потрібно додавати в preloader__body
-					body: `
-							<div class="preloader__one preloader__one_one"></div>
-							<div class="preloader__one preloader__one_two"></div>
-							<div class="preloader__one preloader__one_three"></div>
-							<div class="preloader__one preloader__one_four"></div>
-							<div class="preloader__two preloader__two_five"></div>
-							<div class="preloader__two preloader__two_six"></div>
-							<div class="preloader__two preloader__two_seven"></div>
-							<div class="preloader__two preloader__two_eight"></div>
-							`
-				},
-			};
-			const interval = setInterval(() => {
-				if (document.body) {
-					const preloaderTemplate = `
-								<div class="preloader">
-									<div class="preloader__body">
-										${settings.custom.init ? settings.custom.body : ''}
-										${settings.counter ? '<div class="preloader__counter">0%</div>' : ''}
-										${settings.line ? '<div class="preloader__line"><span></span></div>' : ''}
+	<div id="basket" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#close"></use>
+					</svg>
+				</button>
+				<form action="#" class="popup__basket basket-popup">
+					<div class="basket-popup__order order-pupup">
+						<div class="order-pupup__title title-popup">Оформить заказ</div>
+						<p class="order-pupup__label">
+							Введите свои контактные данные, и наш менеджер свяжется с Вами в течении 1 часа
+						</p>
+						<div class="order-pupup__order-form form-merch form-merch_popup">
+							<div class="form-merch__item">
+								<input data-required data-validate id="userNamePopup" type="text" name="form[]" data-error="" placeholder="" class="form-merch__input input">
+								<label for="userNamePopup" class="form-merch__label">Ваше Имя</label>
+							</div>
+							<div class="form-merch__item">
+								<input data-required="email" data-validate id="userEmailPopup" type="email" name="form[]" data-error="" placeholder="" class="form-merch__input input">
+								<label for="userEmailPopup" class="form-merch__label">Ваша електронная почта</label>
+							</div>
+							<div class="form-merch__item">
+								<input data-required data-validate id="userTelPopup" type="tel" name="form[]" data-error="" placeholder="" class="form-merch__input input">
+								<label for="userTelPopup" class="form-merch__label">Ваш номер телефона</label>
+							</div>
+							<div class="form-merch__item">
+								<button type="submit" class="form-merch__btn btn">Заказать</button>
+							</div>
+						</div>
+						<p class="order-pupup__info-text">
+							Нажимая "Подтвердить заказ", Вы даете согласие на обработку Ваших персональных данных
+						</p>
+					</div>
+					<div class="basket-popup__basket block-basket">
+						<div class="block-basket__title title-popup">
+							Корзина
+						</div>
+						<div class="block-basket__cards">
+							<div class="block-basket__text-empty">Корзина пуста</div>
+							<!-- Карточка -->
+							<!-- <div data-price-cart="76.43" class="block-basket__item item-basket">
+							<div class="item-basket__picture-ibg">
+								<picture><source srcset="img/goods/1.webp" type="image/webp"><img src="img/goods/1.png" alt=""></picture>
+							</div>
+							<div class="item-basket__label">EL003 Elleven Checkpoint-Friendly Compu-Backpack</div>
+							<div class="item-basket__info">
+								<p class="item-basket__color">Цвет <span style="background-color: #309F85;"></span></p>
+								<p class="item-basket__size label-basket">
+									Размер <span>XS</span>
+								</p>
+							</div>
+							<div class="item-basket__body-quantity">
+								<p class="quantity__label label-basket">Кол-во</p>
+								<div class="item-basket__quantity quantity">
+									<button type="button" class="quantity__button quantity__button_minus"></button>
+									<div class="quantity__input">
+										<input autocomplete="off" type="text" name="form[]" value="1">
 									</div>
+									<button type="button" class="quantity__button quantity__button_plus"></button>
 								</div>
-							`;
-					htmlDocument.insertAdjacentHTML("beforeend", preloaderTemplate);
-
-					preloader = document.querySelector('.preloader');
-					preloaderBody = preloader.querySelector('.preloader__body');
-					showPecentLoad = document.querySelector('.preloader__counter');
-					showLineLoad = document.querySelector('.preloader__line span');
-					clearInterval(interval);
-				}
-			}, 100);
-
-			const checkInterval = setInterval(() => {
-				const mainScriptsTag = document.querySelector('[data-main-script]');
-				if (mainScriptsTag) {
-					clearInterval(checkInterval);
-					const preloaderImages = document.querySelectorAll('img');
-					const preloaderStyle = document.querySelector('.preloader-style');
-					if (preloaderImages.length) {
-
-						let imagesLoadedCount = counter = progress = 0;
-
-						htmlDocument.classList.add('loading');
-						htmlDocument.classList.add('lock');
-						window.addEventListener("load", () => htmlDocument.classList.add('download-done'));
-
-						preloaderImages.forEach(preloaderImage => {
-							const imgClone = document.createElement('img');
-							if (imgClone) {
-								imgClone.onload = imageLoaded;
-								imgClone.onerror = imageLoaded;
-								preloaderImage.dataset.src ? imgClone.src = preloaderImage.dataset.src : imgClone.src = preloaderImage.src;
-							}
-						});
-
-						function setValueProgress(progress) {
-							showPecentLoad ? showPecentLoad.innerText = `${progress}%` : null;
-							showLineLoad ? showLineLoad.style.width = `${progress}%` : null;
-						}
-						showPecentLoad ? setValueProgress(progress) : null;
-
-						function imageLoaded() {
-							imagesLoadedCount++;
-							progress = Math.round((100 / preloaderImages.length) * imagesLoadedCount);
-
-							const intervalId = setInterval(() => {
-								counter >= progress ? clearInterval(intervalId) : setValueProgress(++counter);
-								counter >= 100 ? addLoadedClass() : null;
-							}, 40);
-
-						}
-
-						function addLoadedClass() {
-							if (this.isRun == true) return;
-							this.isRun = true;
-
-							let timer = setInterval(() => {
-								if (htmlDocument.closest('.download-done')) {
-									htmlDocument.classList.remove('lock');
-									htmlDocument.classList.remove('loading');
-									setTimeout(() => {
-										htmlDocument.classList.remove('download-done');
-										htmlDocument.classList.add('loaded');
-									}, settings.delayRemovePreloader >= 500 ? settings.delayRemovePreloader - 500 : 0);
-									const intervalRemovePreloader = setInterval(() => {
-										preloader.remove();
-										if (preloaderStyle) {
-											preloaderStyle.remove();
-										}
-										clearInterval(intervalRemovePreloader);
-										clearInterval(timer);
-										preloaderContainer.remove();
-										mainScriptsTag.removeAttribute('data-main-script');
-									}, settings.delayRemovePreloader);
-								} else {
-									return;
-								}
-							}, 300);
-						}
-					} else {
-						if (preloaderStyle) {
-							preloaderStyle.remove();
-						}
-						preloaderContainer.remove();
-					}
-				}
-			}, 100);
-
-
-		})();
-	</script>
-	<script data-main-script src="js/app.min.js?_v=20230107004401"></script>
+								<p class="quantity__label label-basket">min</p>
+							</div>
+							<div class="item-basket__body-summ">
+								<button type="button" class="item-basket__del">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#close"></use>
+									</svg>
+								</button>
+								<div class="item-basket__summ"><span class="item-basket__value-summ">76.43</span> <span>$</span></div>
+							</div>
+						</div> -->
+						</div>
+						<div class="block-basket__body-total">
+							<span class="block-basket__order-number">Заказ № <span>110293</span></span>
+							<span class="block-basket__total">Всего: <span class="block-basket__summ-total">0</span></span>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script data-main-script src="js/app.min.js?_v=20230117131835"></script>
 </body>
 
 </html>
