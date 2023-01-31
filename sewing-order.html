@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230131234146">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230201002314">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -344,7 +344,7 @@
 					<div class="row-header-top__content">
 						<form id="form-hidden" action="#" class="row-header-top__search-form">
 							<div class="row-header-top__inner">
-								<input id="search-input" autocomplete="off" type="text" name="form[]" data-required data-value="" placeholder="Поиск" data-placeholder-nohide class="row-header-top__input input">
+								<input id="search-input" autocomplete="off" type="text" name="form[]" data-required data-validate data-value="" placeholder="Поиск" data-placeholder-nohide class="row-header-top__input input">
 								<button type="submit" class="row-header-top__button row-header-top__button_position">
 									<svg>
 										<use xlink:href="img/icons/icons.svg#search"></use>
@@ -439,8 +439,8 @@
 								</div>
 							</li>
 							<li class="menu__item"><a href="sewing.html" class="menu__link">Пошив</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Производство</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Информация</a></li>
+							<li class="menu__item"><a href="production.html" class="menu__link">Производство</a></li>
+							<li class="menu__item"><a href="contacts.html" class="menu__link">Информация</a></li>
 						</ul>
 						<div class="menu__media menu__media_email"></div>
 						<div class="menu__media menu__media_tel"></div>
@@ -489,31 +489,31 @@
 							</ul>
 							<div class="mainscreen__order-body body-order-mainscreen">
 								<div class="mainscreen__actions actions-mainscreen actions-mainscreen_order">
-									<a href="#" class="actions-mainscreen__btn btn btn_violet">Заказать просчет</a>
+									<a href="#" class="actions-mainscreen__btn btn btn_violet"><span>Заказать просчет</span></a>
 									<span class="actions-mainscreen__info">Минимальное кол-во: <span>25</span></span>
 								</div>
 								<form action="#" class="body-order-mainscreen__form pick-up-size">
 									<div class="pick-up-size__title">Размер</div>
 									<div class="pick-up-size__row">
 										<div class="pick-up-size__body-form">
-											<input checked id="xs" type="radio" name="form[]" value="XS" class="pick-up-size__radio">
-											<label for="xs" class="pick-up-size__label">XS</label>
+											<input checked id="xs1" type="radio" name="form[]" value="XS" class="pick-up-size__radio">
+											<label for="xs1" class="pick-up-size__label">XS</label>
 										</div>
 										<div class="pick-up-size__body-form">
-											<input id="s" type="radio" name="form[]" value="S" class="pick-up-size__radio">
-											<label for="s" class="pick-up-size__label">S</label>
+											<input id="s1" type="radio" name="form[]" value="S" class="pick-up-size__radio">
+											<label for="s1" class="pick-up-size__label">S</label>
 										</div>
 										<div class="pick-up-size__body-form">
-											<input id="m" type="radio" name="form[]" value="M" class="pick-up-size__radio">
-											<label for="m" class="pick-up-size__label">m</label>
+											<input id="m1" type="radio" name="form[]" value="M" class="pick-up-size__radio">
+											<label for="m1" class="pick-up-size__label">m</label>
 										</div>
 										<div class="pick-up-size__body-form">
-											<input id="l" type="radio" name="form[]" value="L" class="pick-up-size__radio">
-											<label for="l" class="pick-up-size__label">l</label>
+											<input id="l1" type="radio" name="form[]" value="L" class="pick-up-size__radio">
+											<label for="l1" class="pick-up-size__label">l</label>
 										</div>
 										<div class="pick-up-size__body-form">
-											<input id="xxl" type="radio" name="form[]" value="XXL" class="pick-up-size__radio">
-											<label for="xxl" class="pick-up-size__label">xxl</label>
+											<input id="xxl1" type="radio" name="form[]" value="XXL" class="pick-up-size__radio">
+											<label for="xxl1" class="pick-up-size__label">xxl</label>
 										</div>
 									</div>
 									<a href="#" data-popup="#size" class="pick-up-size__pick-up-size"><span>Подобрать размер</span></a>
@@ -655,7 +655,7 @@
 								<label for="userTel" class="form-merch__label">Ваш номер телефона</label>
 							</div>
 							<div class="form-merch__item">
-								<button type="submit" class="form-merch__btn btn">Заказать</button>
+								<button type="submit" class="form-merch__btn btn"><span>Заказать</span></button>
 							</div>
 						</form>
 					</div>
@@ -724,16 +724,16 @@
 							<h4 class="nav-footer__label">Категории</h4>
 							<ul class="nav-footer__list">
 								<li class="nav-footer__item">
-									<a href="#" class="nav-footer__link link">Пошив</a>
+									<a href="sewing.html" class="nav-footer__link link">Пошив</a>
 								</li>
 								<li class="nav-footer__item">
-									<a href="#" class="nav-footer__link link">Все товары</a>
+									<a href="all-goods.html" class="nav-footer__link link">Все товары</a>
 								</li>
 								<li class="nav-footer__item">
-									<a href="#" class="nav-footer__link link">Наборы</a>
+									<a href="gifts.html" class="nav-footer__link link">Наборы</a>
 								</li>
 								<li class="nav-footer__item">
-									<a href="#" class="nav-footer__link link">Производство</a>
+									<a href="production.html" class="nav-footer__link link">Производство</a>
 								</li>
 							</ul>
 						</nav>
@@ -741,13 +741,13 @@
 							<h4 class="nav-footer__label">Информация</h4>
 							<ul class="nav-footer__list">
 								<li class="nav-footer__item">
-									<a href="#" class="nav-footer__link link">О нас</a>
+									<a href="contacts.html" class="nav-footer__link link">О нас</a>
 								</li>
 								<li class="nav-footer__item">
-									<a href="#" class="nav-footer__link link">Информация</a>
+									<a href="contacts.html" class="nav-footer__link link">Информация</a>
 								</li>
 								<li class="nav-footer__item">
-									<a href="#" class="nav-footer__link link">Контакты</a>
+									<a href="contacts.html" class="nav-footer__link link">Контакты</a>
 								</li>
 							</ul>
 						</nav>
@@ -1056,7 +1056,7 @@
 			</div>
 		</div>
 	</div>
-	<script data-main-script src="js/app.min.js?_v=20230131234146"></script>
+	<script data-main-script src="js/app.min.js?_v=20230201002314"></script>
 </body>
 
 </html>
