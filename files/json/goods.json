@@ -4,7 +4,7 @@
 			{
 				"id": 1,
 				"category": "sweatshirts",
-				"title": "Рюкзак Elleven Compu-Friendly для контрольно-пропускных пунктов",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
 				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
 				"colors": {
 					"violet": "#524983",
@@ -12,16 +12,14 @@
 					"white": "#F1F1F1"
 				},
 				"price": {
-					"value": "2 789.99"
+					"value": "2 789.99",
+					"currency": "грн"
 				},
-				"images": [
-					{
-						"src": "img/goods/1.png"
-					},
-					{
-						"src": "img/goods/1.png"
-					}
-				],
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png",
+					"3": "img/goods/1.png"
+				},
 				"characteristics": {
 					"material": "100% хлопок",
 					"application": "вышивка, термопечать",
@@ -31,6 +29,80 @@
 			},
 			{
 				"id": 2,
+				"category": "hoodies",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 199.49",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 3,
+				"category": "hoodies",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "3 124.42",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png",
+					"3": "img/goods/1.png",
+					"4": "img/goods/1.png",
+					"5": "img/goods/1.png",
+					"6": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 4,
+				"category": "t-shirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "999.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 5,
 				"category": "sweatshirts",
 				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
 				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
@@ -39,16 +111,1069 @@
 					"green": "#309F85"
 				},
 				"price": {
-					"value": "2 199.99"
+					"value": "2 755.99",
+					"currency": "грн"
 				},
-				"images": [
-					{
-						"src": "img/goods/1.png"
-					},
-					{
-						"src": "img/goods/1.png"
-					}
-				],
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 6,
+				"category": "hoodies",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 199.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 7,
+				"category": "t-shirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "2 221.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 8,
+				"category": "t-shirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "2 575.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 9,
+				"category": "hoodies",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 10,
+				"category": "hoodies",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "2 889.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 11,
+				"category": "t-shirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 12,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 13,
+				"category": "hoodies",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 14,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 15,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 16,
+				"category": "hoodies",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 17,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 18,
+				"category": "hoodies",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 19,
+				"category": "hoodies",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 20,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 21,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 22,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 23,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 24,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 25,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 26,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 27,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 28,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 29,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 30,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 31,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 32,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 33,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 34,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 35,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 36,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 37,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 38,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 39,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 40,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 41,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 42,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 43,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 44,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 45,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 46,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 47,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 48,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
+				"characteristics": {
+					"material": "100% хлопок",
+					"application": "вышивка, термопечать",
+					"trademark": "вышивка, термопечать",
+					"density": "150"
+				}
+			},
+			{
+				"id": 49,
+				"category": "sweatshirts",
+				"title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"subTitle": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
+				"colors": {
+					"violet": "#524983",
+					"green": "#309F85"
+				},
+				"price": {
+					"value": "1 148.99",
+					"currency": "грн"
+				},
+				"images": {
+					"1": "img/goods/1.png",
+					"2": "img/goods/1.png"
+				},
 				"characteristics": {
 					"material": "100% хлопок",
 					"application": "вышивка, термопечать",
