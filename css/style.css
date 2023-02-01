@@ -1127,6 +1127,10 @@ body::after {
   color: #272525;
 }
 
+.btn_dark-white:active {
+  color: #fff;
+}
+
 .btn_violet {
   background-color: #3c336c;
 }
@@ -1163,6 +1167,10 @@ body::after {
   -webkit-transition: opacity 0.2s ease;
   -o-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
+}
+
+.btn:hover.btn_transparent:active {
+  color: #fff;
 }
 
 .link {
@@ -2923,6 +2931,7 @@ body::after {
 }
 
 .product-other__picture-ibg {
+  display: block;
   position: relative;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 47.0625%;
@@ -2951,6 +2960,10 @@ body::after {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+
+.product-other__content {
+  position: relative;
 }
 
 .product-other__title {
@@ -3039,6 +3052,9 @@ body::after {
 .form-block:not(.form-block_no-bg)::before {
   content: "";
   position: absolute;
+}
+
+.form-block:not(.form-block_no-bg)::before:not(.form-block_creative) {
   top: 0;
   height: 110%;
 }
@@ -3741,9 +3757,6 @@ body::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   min-height: 2.5rem;
 }
 
@@ -3809,9 +3822,9 @@ body::after {
 .bottom-actions-goods-filter__num {
   cursor: pointer;
   position: relative;
-  -webkit-transition: all 0.2s ease 0s;
-  -o-transition: all 0.2s ease 0s;
-  transition: all 0.2s ease 0s;
+  -webkit-transition: all 0.45s ease 0s;
+  -o-transition: all 0.45s ease 0s;
+  transition: all 0.45s ease 0s;
 }
 
 .bottom-actions-goods-filter__num::before {
@@ -3826,9 +3839,9 @@ body::after {
           transform: translate(-50%, -50%);
   background-color: transparent;
   border-radius: 50%;
-  -webkit-transition: all 0.2s ease 0s;
-  -o-transition: all 0.2s ease 0s;
-  transition: all 0.2s ease 0s;
+  -webkit-transition: all 0.45s ease 0s;
+  -o-transition: all 0.45s ease 0s;
+  transition: all 0.45s ease 0s;
 }
 
 .bottom-actions-goods-filter__num._active {
@@ -5359,6 +5372,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     display: grid;
   }
 
+  .bottom-actions-goods-filter {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
   .questions-contacts__body-spollers {
     display: -ms-grid;
     display: grid;
@@ -6602,6 +6621,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .sewing-faq__picture-ibg img {
     -o-object-position: center -6.25rem;
        object-position: center -6.25rem;
+  }
+
+  .bottom-actions-goods-filter {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .questions-contacts__picture {
@@ -8840,7 +8865,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     max-width: 51.8%;
   }
 
-  .form-block__bottom:not(.form-block__bottom) {
+  .form-block__bottom:not(.form-block__bottom_contacts) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -9160,10 +9185,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .btn:hover.btn_transparent {
     color: #267f6a;
-  }
-
-  .btn:hover.btn_transparent:active {
-    color: #fff;
   }
 
   .link:hover::before {
