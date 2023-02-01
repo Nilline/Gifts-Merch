@@ -3052,11 +3052,8 @@ body::after {
 .form-block:not(.form-block_no-bg)::before {
   content: "";
   position: absolute;
-}
-
-.form-block:not(.form-block_no-bg)::before:not(.form-block_creative) {
-  top: 0;
   height: 110%;
+  top: 0;
 }
 
 .form-block__container {
@@ -3144,10 +3141,10 @@ body::after {
   position: absolute;
 }
 
-.no-webp .form-block_creative::before{
+.no-webp .form-block_creative:not(.form-block_no-bg)::before{
   background: url("../img/gifts/bg-form.png") center/100% 79% no-repeat; }
 
-.form-block_creative::before {
+.form-block_creative:not(.form-block_no-bg)::before {
   left: 0;
   top: 50%;
   width: 100%;
@@ -6950,7 +6947,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
             flex-direction: column;
   }
 
-  .no-webp .form-block_creative::before{
+  .no-webp .form-block_creative:not(.form-block_no-bg)::before{
     background: url("../img/gifts/bg-form.png") left -1.875rem/100% 100% no-repeat; }
 
   .form-block_creative .form-block__block-title {
@@ -9406,7 +9403,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 .webp .footer{ background: url(../img/footer/bg.webp) top left/cover no-repeat; }
 
-.webp .form-block_creative::before{ background: url(../img/gifts/bg-form.webp) center/100% 79% no-repeat; }
+.webp .form-block_creative:not(.form-block_no-bg)::before{ background: url(../img/gifts/bg-form.webp) center/100% 79% no-repeat; }
 
 .webp .lg-outer .lg-item:not(.lg-start-end-progress){ background: url(data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAACwBQCdASogACAAPpFCnEolo6KhqAgAsBIJaQAD5dDxrXM99232GfVDjLF0EQDwsC0CXKtWlgAA/vV76pcYbjjsL88+3qb/4UfhRX+dwASYANdOF+J5Nu61NxB7TUbHeCQeee2d4nX3M/8oPzSbTnBOl/xCNiQkRhkYBtGvv3/fXfn2CbNj/EPmnHMb/H7zFQx28TJK5yXYt1B6zlKYbIeBfYPo1h1tsfJDbPjNrzTs7O1elyh7eF4fdYd8hFly7AAAAA==) no-repeat scroll center center transparent; }
 
@@ -9432,7 +9429,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 @media (max-width: 40.62375em){
 
-  .webp .form-block_creative::before{ background: url(../img/gifts/bg-form.webp) left -1.875rem/100% 100% no-repeat; }
+  .webp .form-block_creative:not(.form-block_no-bg)::before{ background: url(../img/gifts/bg-form.webp) left -1.875rem/100% 100% no-repeat; }
 }
 
 @media (max-width: 29.99875em){
