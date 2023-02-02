@@ -7934,8 +7934,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
             align-items: flex-end;
   }
 
+  .wrapper_other.wrapper_contacts .mainscreen__picture {
+    display: block;
+  }
+
   .mainscreen__title {
-    font-size: 2.1875rem;
+    font-size: 2.1875rem !important;
   }
 
   .body-order-mainscreen {
