@@ -5315,6 +5315,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .wrapper_other.wrapper_contacts .mainscreen__picture {
+    display: block;
+  }
+
+  .wrapper_other.wrapper_contacts .mainscreen__picture {
     width: 55.875rem;
   }
 
