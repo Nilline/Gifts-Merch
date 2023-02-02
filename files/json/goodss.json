@@ -1923,11 +1923,11 @@
 					},
 					"images": [
 						{
-							"path": "img/gifts/1.jpg",
+							"path": "img/present/1.jpg",
 							"alt": "Lorem ipsum"
 						},
 						{
-							"path": "img/gifts/1.jpg",
+							"path": "img/present/1.jpg",
 							"alt": "Lorem ipsum"
 						}
 					],
@@ -1950,11 +1950,11 @@
 					"descr": "Лучший набор для подарка 2",
 					"images": [
 						{
-							"path": "img/gifts/2.jpg",
+							"path": "img/present/2.jpg",
 							"alt": "Lorem ipsum"
 						},
 						{
-							"path": "img/gifts/2.jpg",
+							"path": "img/present/2.jpg",
 							"alt": "Lorem ipsum"
 						}
 					],
@@ -1977,11 +1977,11 @@
 					"descr": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, officiis.",
 					"images": [
 						{
-							"path": "img/gifts/3.jpg",
+							"path": "img/present/3.jpg",
 							"alt": "Lorem ipsum"
 						},
 						{
-							"path": "img/gifts/3.jpg",
+							"path": "img/present/3.jpg",
 							"alt": "Lorem ipsum"
 						}
 					],
@@ -2003,11 +2003,11 @@
 					},
 					"images": [
 						{
-							"path": "img/gifts/4.jpg",
+							"path": "img/present/4.jpg",
 							"alt": "Lorem ipsum"
 						},
 						{
-							"path": "img/gifts/4.jpg",
+							"path": "img/present/4.jpg",
 							"alt": "Lorem ipsum"
 						}
 					],
@@ -2030,11 +2030,11 @@
 					"descr": "Лучший набор для подарка 7",
 					"images": [
 						{
-							"path": "img/gifts/1.jpg",
+							"path": "img/present/1.jpg",
 							"alt": "Lorem ipsum"
 						},
 						{
-							"path": "img/gifts/1.jpg",
+							"path": "img/present/1.jpg",
 							"alt": "Lorem ipsum"
 						}
 					],
@@ -2057,11 +2057,11 @@
 					"descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto autem nulla sit dolore minima perferendis fugiat cumque ex amet? Autem nobis omnis quidem, modi et nam odio sed quo maiores?",
 					"images": [
 						{
-							"path": "img/gifts/4.jpg",
+							"path": "img/present/4.jpg",
 							"alt": "Lorem ipsum"
 						},
 						{
-							"path": "img/gifts/4.jpg",
+							"path": "img/present/4.jpg",
 							"alt": "Lorem ipsum"
 						}
 					],
@@ -2084,11 +2084,11 @@
 					"descr": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, officiis.",
 					"images": [
 						{
-							"path": "img/gifts/2.jpg",
+							"path": "img/present/2.jpg",
 							"alt": "Lorem ipsum"
 						},
 						{
-							"path": "img/gifts/2.jpg",
+							"path": "img/present/2.jpg",
 							"alt": "Lorem ipsum"
 						}
 					],
@@ -2111,11 +2111,11 @@
 					"descr": "Лучший набор для подарка 7",
 					"images": [
 						{
-							"path": "img/gifts/1.jpg",
+							"path": "img/present/1.jpg",
 							"alt": "Lorem ipsum"
 						},
 						{
-							"path": "img/gifts/1.jpg",
+							"path": "img/present/1.jpg",
 							"alt": "Lorem ipsum"
 						}
 					],
@@ -2138,11 +2138,11 @@
 					"descr": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, officiis.",
 					"images": [
 						{
-							"path": "img/gifts/3.jpg",
+							"path": "img/present/3.jpg",
 							"alt": "Lorem ipsum"
 						},
 						{
-							"path": "img/gifts/3.jpg",
+							"path": "img/present/3.jpg",
 							"alt": "Lorem ipsum"
 						}
 					],
@@ -2164,11 +2164,11 @@
 					},
 					"images": [
 						{
-							"path": "img/gifts/4.jpg",
+							"path": "img/present/4.jpg",
 							"alt": "Lorem ipsum"
 						},
 						{
-							"path": "img/gifts/4.jpg",
+							"path": "img/present/4.jpg",
 							"alt": "Lorem ipsum"
 						}
 					],
