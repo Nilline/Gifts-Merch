@@ -3467,7 +3467,7 @@ body::after {
 }
 
 .wrapper_gifts .goods-filter {
-  padding: 0;
+  padding: 1.875rem 0 0;
 }
 
 .goods-filter__nav:not(:last-child) {
