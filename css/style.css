@@ -3141,10 +3141,10 @@ body::after {
   position: absolute;
 }
 
-.no-webp .form-block_creative:not(.form-block_no-bg)::before{
+.no-webp .wrapper_gifts .form-block_creative:not(.form-block_no-bg)::before{
   background: url("../img/present/bg-form.png") center/100% 79% no-repeat; }
 
-.form-block_creative:not(.form-block_no-bg)::before {
+.wrapper_gifts .form-block_creative:not(.form-block_no-bg)::before {
   left: 0;
   top: 50%;
   width: 100%;
@@ -4813,6 +4813,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 }
 
+@media (min-width: 40.62375em) and (min-width: 99.99875em) {
+  .form-block_creative .form-block__decor-box {
+    right: 0.00000625rem;
+  }
+}
+
 @media (min-width: 43.74875em) {
   .wrapper_production .mainscreen__content {
     width: 50%;
@@ -5003,7 +5009,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 @media (min-width: 47.99875em) and (min-width: 74.99875em) {
   .creative__container::before {
-    right: 0rem;
+    right: 0.00000625rem;
   }
 }
 
@@ -5622,10 +5628,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .product-other__picture-ibg::after {
     right: -2.25rem;
-  }
-
-  .form-block_creative .form-block__decor-box {
-    right: 0;
   }
 }
 
@@ -6945,7 +6947,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
             flex-direction: column;
   }
 
-  .no-webp .form-block_creative:not(.form-block_no-bg)::before{
+  .no-webp .wrapper_gifts .form-block_creative:not(.form-block_no-bg)::before{
     background: url("../img/present/bg-form.png") left -1.875rem/100% 100% no-repeat; }
 
   .form-block_creative .form-block__block-title {
@@ -8254,16 +8256,16 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 @media (min-width: 101.87375em) and (max-width: 106.875em) {
-@supports (margin-left: clamp( -2.5625rem , 52.1972475631rem  +  -51.2371907023vw , 0rem )) {
+@supports (margin-left: clamp( -2.5625rem , 52.1973811235rem  +  -51.2373156711vw , 0.00000625rem )) {
     .menu__body {
-      margin-left: clamp( -2.5625rem , 52.1972475631rem  +  -51.2371907023vw , 0rem );
+      margin-left: clamp( -2.5625rem , 52.1973811235rem  +  -51.2373156711vw , 0.00000625rem );
     }
 }
 
-@supports not (margin-left: clamp( -2.5625rem , 52.1972475631rem  +  -51.2371907023vw , 0rem )) {
+@supports not (margin-left: clamp( -2.5625rem , 52.1973811235rem  +  -51.2373156711vw , 0.00000625rem )) {
     .menu__body {
       margin-left: calc(
-				0rem + -2.5625 * (100vw - 101.87375rem) / 5.00125
+				0.00000625rem + -2.5625 * (100vw - 101.87375rem) / 5.00125
 			);
     }
 }
@@ -8543,7 +8545,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .wrapper_other .mainscreen__picture {
-    right: 0rem;
+    right: 0.00000625rem;
   }
 
   .wrapper_gifts .mainscreen__picture {
@@ -8574,13 +8576,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     }
 }
 
-@supports (right: clamp( -5rem , -13.3329861111rem  +  27.7777777778vw , 0rem )) {
+@supports (right: clamp( -5rem , -13.3329965273rem  +  27.7778125vw , 0.00000625rem )) {
     .wrapper_other .mainscreen__picture {
-      right: clamp( -5rem , -13.3329861111rem  +  27.7777777778vw , 0rem );
+      right: clamp( -5rem , -13.3329965273rem  +  27.7778125vw , 0.00000625rem );
     }
 }
 
-@supports not (right: clamp( -5rem , -13.3329861111rem  +  27.7777777778vw , 0rem )) {
+@supports not (right: clamp( -5rem , -13.3329965273rem  +  27.7778125vw , 0.00000625rem )) {
     .wrapper_other .mainscreen__picture {
       right: calc(
 				-5rem + 5 * (100vw - 29.99875rem) / 18
@@ -8778,13 +8780,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 @media (min-width: 47.99875em) and (min-width: 61.99875em) and (max-width: 74.99875em) {
-@supports (right: clamp( -5.625rem , -32.4513822115rem  +  43.2692307692vw , 0rem )) {
+@supports (right: clamp( -5.625rem , -32.4514120186rem  +  43.2692788462vw , 0.00000625rem )) {
     .creative__container::before {
-      right: clamp( -5.625rem , -32.4513822115rem  +  43.2692307692vw , 0rem );
+      right: clamp( -5.625rem , -32.4514120186rem  +  43.2692788462vw , 0.00000625rem );
     }
 }
 
-@supports not (right: clamp( -5.625rem , -32.4513822115rem  +  43.2692307692vw , 0rem )) {
+@supports not (right: clamp( -5.625rem , -32.4514120186rem  +  43.2692788462vw , 0.00000625rem )) {
     .creative__container::before {
       right: calc(
 				-5.625rem + 5.625 * (100vw - 61.99875rem) / 13
@@ -8976,16 +8978,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .form-block_creative .form-block__block-title {
     max-width: 60.2%;
   }
-
-  .form-block_creative .form-block__decor-box {
-    right: -8rem;
-  }
-}
-
-@media (max-width: 99.99875em) and (min-width: 61.99875em) {
-  .form-block_creative .form-block__decor-box {
-    right: calc(-128px + 128 * (100vw - 991.98px) / 608);
-  }
 }
 
 @media (min-width: 40.62375em) and (min-width: 61.99875em) and (max-width: 87.49875em) {
@@ -9026,22 +9018,42 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .form-block_creative .form-block__decor-box {
     height: 23.125rem;
   }
+
+  .form-block_creative .form-block__decor-box {
+    right: -8rem;
+  }
+}
+
+@media (min-width: 40.62375em) and (min-width: 61.99875em) and (max-width: 99.99875em) {
+@supports (right: clamp( -8rem , -21.0523786182rem  +  21.0526480263vw , 0.00000625rem )) {
+    .form-block_creative .form-block__decor-box {
+      right: clamp( -8rem , -21.0523786182rem  +  21.0526480263vw , 0.00000625rem );
+    }
+}
+
+@supports not (right: clamp( -8rem , -21.0523786182rem  +  21.0526480263vw , 0.00000625rem )) {
+    .form-block_creative .form-block__decor-box {
+      right: calc(
+				-8rem + 8 * (100vw - 61.99875rem) / 38
+			);
+    }
+}
 }
 
 @media (max-width: 74.99875em) and (min-width: 40.62375em) and (min-width: 74.99875em) {
   .form-block_creative .form-block__decor-box {
-    top: 0rem;
+    top: 0.00000625rem;
   }
 }
 
 @media (max-width: 74.99875em) and (min-width: 40.62375em) and (min-width: 61.99875em) and (max-width: 74.99875em) {
-@supports (top: clamp( -9.375rem , -54.0856370192rem  +  72.1153846154vw , 0rem )) {
+@supports (top: clamp( -9.375rem , -54.0856668263rem  +  72.1154326923vw , 0.00000625rem )) {
     .form-block_creative .form-block__decor-box {
-      top: clamp( -9.375rem , -54.0856370192rem  +  72.1153846154vw , 0rem );
+      top: clamp( -9.375rem , -54.0856668263rem  +  72.1154326923vw , 0.00000625rem );
     }
 }
 
-@supports not (top: clamp( -9.375rem , -54.0856370192rem  +  72.1153846154vw , 0rem )) {
+@supports not (top: clamp( -9.375rem , -54.0856668263rem  +  72.1154326923vw , 0.00000625rem )) {
     .form-block_creative .form-block__decor-box {
       top: calc(
 				-9.375rem + 9.375 * (100vw - 61.99875rem) / 13
@@ -9391,7 +9403,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 .webp .footer{ background: url(../img/footer/bg.webp) top left/cover no-repeat; }
 
-.webp .form-block_creative:not(.form-block_no-bg)::before{ background: url(../img/present/bg-form.webp) center/100% 79% no-repeat; }
+.webp .wrapper_gifts .form-block_creative:not(.form-block_no-bg)::before{ background: url(../img/present/bg-form.webp) center/100% 79% no-repeat; }
 
 .webp .lg-outer .lg-item:not(.lg-start-end-progress){ background: url(data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAACwBQCdASogACAAPpFCnEolo6KhqAgAsBIJaQAD5dDxrXM99232GfVDjLF0EQDwsC0CXKtWlgAA/vV76pcYbjjsL88+3qb/4UfhRX+dwASYANdOF+J5Nu61NxB7TUbHeCQeee2d4nX3M/8oPzSbTnBOl/xCNiQkRhkYBtGvv3/fXfn2CbNj/EPmnHMb/H7zFQx28TJK5yXYt1B6zlKYbIeBfYPo1h1tsfJDbPjNrzTs7O1elyh7eF4fdYd8hFly7AAAAA==) no-repeat scroll center center transparent; }
 
@@ -9417,7 +9429,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 @media (max-width: 40.62375em){
 
-  .webp .form-block_creative:not(.form-block_no-bg)::before{ background: url(../img/present/bg-form.webp) left -1.875rem/100% 100% no-repeat; }
+  .webp .wrapper_gifts .form-block_creative:not(.form-block_no-bg)::before{ background: url(../img/present/bg-form.webp) left -1.875rem/100% 100% no-repeat; }
 }
 
 @media (max-width: 29.99875em){
