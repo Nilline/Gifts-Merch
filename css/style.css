@@ -7180,7 +7180,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .wrapper_other .mainscreen {
-    -webkit-mask-size: cover;
+    -webkit-mask-size: 100% 100%;
     -webkit-mask-position: top center;
     -webkit-mask-image: url("../img/mainscreen/bg-sewing-shadow-480.png");
   }
