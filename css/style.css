@@ -2682,6 +2682,12 @@ body::after {
      object-position: left top;
 }
 
+.mainscreen .mainscreen__img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
 .mainscreen__title:not(:last-child) {
   margin-bottom: 0.625rem;
 }
