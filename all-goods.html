@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230202203535">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230220135143">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -227,17 +227,18 @@
 					init: true,
 					// Элементы, которые нужно добавлять в preloader__body
 					body: `
-							<div class="preloader__one preloader__one_one"></div>
-							<div class="preloader__one preloader__one_two"></div>
-							<div class="preloader__one preloader__one_three"></div>
-							<div class="preloader__one preloader__one_four"></div>
-							<div class="preloader__two preloader__two_five"></div>
-							<div class="preloader__two preloader__two_six"></div>
-							<div class="preloader__two preloader__two_seven"></div>
-							<div class="preloader__two preloader__two_eight"></div>
-							`
+				<div class="preloader__one preloader__one_one"></div>
+				<div class="preloader__one preloader__one_two"></div>
+				<div class="preloader__one preloader__one_three"></div>
+				<div class="preloader__one preloader__one_four"></div>
+				<div class="preloader__two preloader__two_five"></div>
+				<div class="preloader__two preloader__two_six"></div>
+				<div class="preloader__two preloader__two_seven"></div>
+				<div class="preloader__two preloader__two_eight"></div>
+				`
 				},
 			};
+			window.addEventListener("load", () => htmlDocument.classList.add('download-done'));
 			const checkBodyinterval = setInterval(() => {
 				if (document.body) {
 					clearInterval(checkBodyinterval);
@@ -268,7 +269,6 @@
 						let imagesLoadedCount = counter = progress = 0;
 						htmlDocument.classList.add('loading');
 						htmlDocument.classList.add('lock');
-						window.addEventListener("load", () => htmlDocument.classList.add('download-done'));
 						preloaderImages.forEach(preloaderImage => {
 							const imgClone = document.createElement('img');
 							if (imgClone) {
@@ -1411,7 +1411,7 @@
 			</div>
 		</div>
 	</div>
-	<script data-main-script src="js/app.min.js?_v=20230202203535"></script>
+	<script data-main-script src="js/app.min.js?_v=20230220135143"></script>
 </body>
 
 </html>
